@@ -1,12 +1,11 @@
 import numpy as np
-import sys
 import tensorflow as tf 
 from igm import Igm
 
 glacier = Igm()
 
 # Point to ice flow emulator 
-glacier.config.iceflow_model_lib_path = str(sys.argv[1])
+glacier.config.iceflow_model_lib_path = '/projects/etpi5866/software/igm/model-lib/f17_pismbp_GJ_22_a'
 
 # Point to observation file
 glacier.config.observation_file = '../inputs/observation.nc'
