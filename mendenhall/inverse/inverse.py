@@ -13,7 +13,7 @@ glacier = Igm()
 glacier.config.iceflow_model_lib_path = '/projects/' + USER + '/software/igm/model-lib/f17_pismbp_GJ_22_a'
 
 # Point to observation file
-glacier.config.observation_file = '../inputs/observation.nc'
+glacier.config.observation_file = './inputs/observation.nc'
 
 # Control and cost variables
 glacier.config.opti_control = ['thk', 'strflowctrl', 'usurf']
