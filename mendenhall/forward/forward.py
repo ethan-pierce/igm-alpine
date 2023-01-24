@@ -34,6 +34,7 @@ glacier.config.tend = 2120
 glacier.config.tsave = 5
 glacier.config.cfl = 0.15
 glacier.config.usegpu = True 
+glacier.config.vars_to_save = ["topg", "usurf", "thk", "smb", "velbar_mag", "velsurf_mag", "uvelsurf", "vvelsurf", "uvelbase", "vvelbase"]
 
 # Initialize the model
 glacier.initialize()
@@ -48,5 +49,7 @@ with tf.device("/GPU:0"):
         glacier.update_iceflow()
         glacier.update_t_dt()
         glacier.update_thk()
+        glacier.update_ncdf_ex()
+        glacier.update_ncdf_ts()
 
 glacier.print_all_comp_info()
