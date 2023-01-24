@@ -51,7 +51,7 @@
        opti_make_holes_in_data : 0
               opti_output_freq : 50
         geology_optimized_file : geology-optimized.nc
-                  vars_to_save : ['topg', 'usurf', 'thk', 'smb', 'velbar_mag', 'velsurf_mag']
+                  vars_to_save : ['topg', 'usurf', 'thk', 'smb', 'velbar_mag', 'velsurf_mag', 'uvelsurf', 'vvelsurf', 'uvelbase', 'vvelbase']
                        varplot : velbar_mag
                    varplot_max : 500
                 mb_update_freq : 1
