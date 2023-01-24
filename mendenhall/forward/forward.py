@@ -7,6 +7,14 @@ import sys
 sys.path.append('/projects/' + USER + '/igm/src')
 from igm import Igm
 
+# Linear SMB parameterization
+class Igm(Igm):
+    def update_smb_mysmb(self):
+        ela = self.ELA 
+        smb = (self.usurf - ela) * self.gradmb
+        smb = tf.where(self.icemask > 0.5, smb, -10)
+        self.smb.assign(smb)
+
 glacier = Igm()
 
 # Point to ice flow emulator 
@@ -15,13 +23,16 @@ glacier.config.iceflow_model_lib_path = '/projects/' + USER + '/igm/model-lib/f1
 # Point to geology file
 glacier.config.geology_file = './inputs/geology.nc'
 
-# Set SMB parameterization
-glacier.config.type_mass_balance = 'simple'
+# Set up SMB parameters
+glacier.config.type_mass_balance = 'mysmb'
+glacier.ELA = 1100
+glacier.gradmb = 0.003
 
 # Other configuration variables
 glacier.config.tstart = 2020
 glacier.config.tend = 2120
 glacier.config.tsave = 5
+glacier.config.cfl = 0.15
 glacier.config.usegpu = True 
 
 # Initialize the model
