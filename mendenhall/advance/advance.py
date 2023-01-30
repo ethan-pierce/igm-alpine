@@ -24,16 +24,16 @@ glacier.config.geology_file = './inputs/geology.nc'
 
 # Set up SMB parameters
 glacier.config.type_mass_balance = 'mysmb'
-glacier.ELA = 750
+glacier.ELA = 500
 glacier.gradmb = 0.005
 
 # Other configuration variables
-glacier.config.tstart = 0
-glacier.config.tend = 1000
+glacier.config.tstart = -1000
+glacier.config.tend = 0
 glacier.config.tsave = 10
 glacier.config.cfl = 0.08
-glacier.config.usegpu = True 
 glacier.config.vars_to_save = ["topg", "usurf", "thk", "smb", "velbar_mag", "velsurf_mag"]
+glacier.config.usegpu = True 
 glacier.saveresult = True
 
 # Initialize the model
