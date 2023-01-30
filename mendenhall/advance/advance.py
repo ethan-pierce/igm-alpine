@@ -50,5 +50,6 @@ with tf.device("/GPU:0"):
         glacier.update_thk()
         glacier.update_ncdf_ex()
         glacier.update_ncdf_ts()
+        glacier.print_info()
 
 glacier.print_all_comp_info()
