@@ -31,11 +31,6 @@ glacier.config.opti_regu_param_strflowctrl = 1
 # Smoothing parameters
 glacier.config.opti_smooth_anisotropy_factor = 0.2
 
-# Save variables
-glacier.config.opti_vars_to_save = ['topg', 'usurf', 'thk', 'strflowctrl', 'arrhenius', 'slidingco', 
-                                    'velsurf_mag', 'velsurfobs_mag', 'divflux', 
-                                    'velbase_mag', 'uvelbase', 'vvelbase', 'wvelbase']
-
 # Initialize inverse model
 glacier.initialize()
 
