@@ -1,0 +1,180 @@
+Build IGM class
++++++++++++++++++++ START IGM ++++++++++++++++++++++++++++++++++++++++++
+PARAMETERS ARE ...... 
+                   working_dir : 
+                  geology_file : ./inputs/geology.nc
+                      resample : 1
+                        tstart : -1000
+                          tend : -900
+                restartingfile : 
+                     verbosity : 0
+                         tsave : 1
+                   plot_result : False
+                     plot_live : False
+                        usegpu : True
+                          stop : False
+              init_strflowctrl : 78
+                init_slidingco : 0
+                init_arrhenius : 78
+                            dz : 20
+                        maxthk : 1000.0
+              clim_update_freq : 1
+                  type_climate : 
+               erosion_include : False
+                   erosion_cst : 2.7e-07
+                   erosion_exp : 2
+           erosion_update_freq : 100
+                uplift_include : False
+                   uplift_rate : 0.002
+            uplift_update_freq : 100
+        iceflow_model_lib_path : /projects/etpi5866/igm/model-lib/f15_cfsflow_GJ_22_a/50
+          multiple_window_size : 0
+              force_max_velbar : 0
+                      optimize : False
+             opti_vars_to_save : ['topg', 'usurf', 'thk', 'strflowctrl', 'arrhenius', 'slidingco', 'velsurf_mag', 'velsurfobs_mag', 'divflux']
+              observation_file : observation.nc
+             thk_profiles_file : 
+                     mode_opti : thkstrflowctrl
+          opti_thr_strflowctrl : 78.0
+            opti_init_zero_thk : False
+           opti_regu_param_thk : 10.0
+   opti_regu_param_strflowctrl : 1.0
+ opti_smooth_anisotropy_factor : 0.2
+         opti_convexity_weight : 0.002
+             opti_usurfobs_std : 5.0
+          opti_strflowctrl_std : 5.0
+           opti_velsurfobs_std : 3.0
+               opti_thkobs_std : 5.0
+           opti_divfluxobs_std : 1.0
+                  opti_control : ['thk', 'strflowctrl', 'usurf']
+                     opti_cost : ['velsurf', 'thk', 'usurf', 'divfluxfcz', 'icemask']
+                  opti_nbitmin : 50
+                  opti_nbitmax : 1000
+                opti_step_size : 0.001
+       opti_make_holes_in_data : 0
+              opti_output_freq : 50
+        geology_optimized_file : geology-optimized.nc
+                  vars_to_save : ['topg', 'usurf', 'thk', 'smb', 'velbar_mag', 'velsurf_mag', 'slidingco', 'arrhenius']
+                       varplot : velbar_mag
+                   varplot_max : 500
+                mb_update_freq : 1
+             type_mass_balance : mysmb
+                    mb_scaling : 1.0
+                mb_simple_file : mb_simple_param.txt
+            smb_model_lib_path : ../../model-lib/smb_meteoswissglamos
+    smoothing_thk_filter_shape : 3
+           smoothing_thk_sigma : 3
+     smoothing_thk_update_freq : 100
+                           cfl : 0.01
+                         dtmax : 10.0
+               tracking_method : 3d
+             frequency_seeding : 10
+               density_seeding : 0.2
+IGM 10:43:03 : Iterations =      0  |  Time =    -1000  |  DT =   10.00  |  Ice Volume (km^3) =       0.00 
+IGM 10:43:04 : Iterations =      1  |  Time =     -999  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:05 : Iterations =      2  |  Time =     -998  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:05 : Iterations =      3  |  Time =     -997  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:06 : Iterations =      4  |  Time =     -996  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:07 : Iterations =      5  |  Time =     -995  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:08 : Iterations =      6  |  Time =     -994  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:09 : Iterations =      7  |  Time =     -993  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:09 : Iterations =      8  |  Time =     -992  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:10 : Iterations =      9  |  Time =     -991  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:11 : Iterations =     10  |  Time =     -990  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:12 : Iterations =     11  |  Time =     -989  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:13 : Iterations =     12  |  Time =     -988  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:14 : Iterations =     13  |  Time =     -987  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:14 : Iterations =     14  |  Time =     -986  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:15 : Iterations =     15  |  Time =     -985  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:16 : Iterations =     16  |  Time =     -984  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:17 : Iterations =     17  |  Time =     -983  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:18 : Iterations =     18  |  Time =     -982  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:18 : Iterations =     19  |  Time =     -981  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:19 : Iterations =     20  |  Time =     -980  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:20 : Iterations =     21  |  Time =     -979  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:21 : Iterations =     22  |  Time =     -978  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:22 : Iterations =     23  |  Time =     -977  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:23 : Iterations =     24  |  Time =     -976  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:23 : Iterations =     25  |  Time =     -975  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:24 : Iterations =     26  |  Time =     -974  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:25 : Iterations =     27  |  Time =     -973  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:26 : Iterations =     28  |  Time =     -972  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:27 : Iterations =     29  |  Time =     -971  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:27 : Iterations =     30  |  Time =     -970  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:28 : Iterations =     31  |  Time =     -969  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:29 : Iterations =     32  |  Time =     -968  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:30 : Iterations =     33  |  Time =     -967  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:31 : Iterations =     34  |  Time =     -966  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:31 : Iterations =     35  |  Time =     -965  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:32 : Iterations =     36  |  Time =     -964  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:33 : Iterations =     37  |  Time =     -963  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:34 : Iterations =     38  |  Time =     -962  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:35 : Iterations =     39  |  Time =     -961  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:36 : Iterations =     40  |  Time =     -960  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:36 : Iterations =     41  |  Time =     -959  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:37 : Iterations =     42  |  Time =     -958  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:38 : Iterations =     43  |  Time =     -957  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:39 : Iterations =     44  |  Time =     -956  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:40 : Iterations =     45  |  Time =     -955  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:40 : Iterations =     46  |  Time =     -954  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:41 : Iterations =     47  |  Time =     -953  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:42 : Iterations =     48  |  Time =     -952  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:43 : Iterations =     49  |  Time =     -951  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:44 : Iterations =     50  |  Time =     -950  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:45 : Iterations =     51  |  Time =     -949  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:45 : Iterations =     52  |  Time =     -948  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:46 : Iterations =     53  |  Time =     -947  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:47 : Iterations =     54  |  Time =     -946  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:48 : Iterations =     55  |  Time =     -945  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:49 : Iterations =     56  |  Time =     -944  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:49 : Iterations =     57  |  Time =     -943  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:50 : Iterations =     58  |  Time =     -942  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:51 : Iterations =     59  |  Time =     -941  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:52 : Iterations =     60  |  Time =     -940  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:53 : Iterations =     61  |  Time =     -939  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:54 : Iterations =     62  |  Time =     -938  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:54 : Iterations =     63  |  Time =     -937  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:55 : Iterations =     64  |  Time =     -936  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:56 : Iterations =     65  |  Time =     -935  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:57 : Iterations =     66  |  Time =     -934  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:58 : Iterations =     67  |  Time =     -933  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:58 : Iterations =     68  |  Time =     -932  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:43:59 : Iterations =     69  |  Time =     -931  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:44:00 : Iterations =     70  |  Time =     -930  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:44:01 : Iterations =     71  |  Time =     -929  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:44:02 : Iterations =     72  |  Time =     -928  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:44:03 : Iterations =     73  |  Time =     -927  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:44:03 : Iterations =     74  |  Time =     -926  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:44:04 : Iterations =     75  |  Time =     -925  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:44:05 : Iterations =     76  |  Time =     -924  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:44:06 : Iterations =     77  |  Time =     -923  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:44:07 : Iterations =     78  |  Time =     -922  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:44:07 : Iterations =     79  |  Time =     -921  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:44:08 : Iterations =     80  |  Time =     -920  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:44:09 : Iterations =     81  |  Time =     -919  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:44:10 : Iterations =     82  |  Time =     -918  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:44:11 : Iterations =     83  |  Time =     -917  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:44:12 : Iterations =     84  |  Time =     -916  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:44:12 : Iterations =     85  |  Time =     -915  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:44:13 : Iterations =     86  |  Time =     -914  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:44:14 : Iterations =     87  |  Time =     -913  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:44:15 : Iterations =     88  |  Time =     -912  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:44:16 : Iterations =     89  |  Time =     -911  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:44:16 : Iterations =     90  |  Time =     -910  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:44:17 : Iterations =     91  |  Time =     -909  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:44:18 : Iterations =     92  |  Time =     -908  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:44:19 : Iterations =     93  |  Time =     -907  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:44:20 : Iterations =     94  |  Time =     -906  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:44:21 : Iterations =     95  |  Time =     -905  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:44:21 : Iterations =     96  |  Time =     -904  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:44:22 : Iterations =     97  |  Time =     -903  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:44:23 : Iterations =     98  |  Time =     -902  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:44:24 : Iterations =     99  |  Time =     -901  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+IGM 10:44:25 : Iterations =    100  |  Time =     -900  |  DT =   10.00  |  Ice Volume (km^3) =        nan 
+Computational statistics report:
+                 All  |  mean time per it :      nan  |  total :   0.0000  |  number it  :        0
+        Mass balance  |  mean time per it :   0.0004  |  total :   0.0358  |  number it  :       98
+            Ice flow  |  mean time per it :   0.7547  |  total :  74.7185  |  number it  :       99
+           Time step  |  mean time per it :   0.0005  |  total :   0.0454  |  number it  :       98
+           Transport  |  mean time per it :   0.0031  |  total :   0.3027  |  number it  :       98
+        Outputs ncdf  |  mean time per it :   0.0520  |  total :   5.1466  |  number it  :       99
