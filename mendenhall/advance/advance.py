@@ -27,12 +27,19 @@ glacier.config.type_mass_balance = 'mysmb'
 glacier.ELA = 500
 glacier.gradmb = 0.005
 
-# Other configuration variables
+# Set up sliding parameters
+glacier.config.init_slidingco = 0
+glacier.config.init_arrhenius = 78
+
+# Simulation variables
 glacier.config.tstart = -1000
-glacier.config.tend = 0
-glacier.config.tsave = 10
-glacier.config.cfl = 0.08
-glacier.config.vars_to_save = ["topg", "usurf", "thk", "smb", "velbar_mag", "velsurf_mag"]
+glacier.config.tend = -990
+glacier.config.tsave = 1
+glacier.config.cfl = 0.01
+glacier.config.vars_to_save = ["topg", "usurf", "thk", "smb", 
+                               "velbar_mag", "velsurf_mag", 
+                               "slidingco", "arrhenius"]
+                               
 glacier.config.usegpu = True 
 glacier.saveresult = True
 
