@@ -1,7 +1,7 @@
-2023-01-24 10:09:39.959220: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE4.1 SSE4.2 AVX AVX2 FMA
+2023-01-31 11:10:59.775781: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE4.1 SSE4.2 AVX AVX2 FMA
 To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2023-01-24 10:09:40.860347: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
-2023-01-24 10:09:40.948906: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 2794670000 Hz
+2023-01-31 11:10:59.945402: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+2023-01-31 11:10:59.957903: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 2794670000 Hz
 /projects/etpi5866/igm/src/igm.py:3157: RuntimeWarning: invalid value encountered in divide
   costs[:, i] /= np.max(costs[:, i])
 /projects/etpi5866/software/anaconda/envs/igm/lib/python3.8/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning: Mean of empty slice.
@@ -47,8 +47,8 @@ PARAMETERS ARE ......
                      mode_opti : thkstrflowctrl
           opti_thr_strflowctrl : 78.0
             opti_init_zero_thk : False
-           opti_regu_param_thk : 10.0
-   opti_regu_param_strflowctrl : 1.0
+           opti_regu_param_thk : 10
+   opti_regu_param_strflowctrl : 1
  opti_smooth_anisotropy_factor : 0.2
          opti_convexity_weight : 0.002
              opti_usurfobs_std : 5
@@ -102,4 +102,4 @@ PARAMETERS ARE ......
  OPTI, step   950 , ICE_VOL:   24.77 , COST_U:    7.11 , COST_H:    4.40 , COST_D :    0.00 , COST_S :    1.64 , REGU_H :  -81.08 , REGU_A :    0.13 
 Computational statistics report:
                  All  |  mean time per it :      nan  |  total :   0.0000  |  number it  :        0
-            Optimize  |  mean time per it :   1.6761  |  total : 1672.7732  |  number it  :      998
+            Optimize  |  mean time per it :   1.6628  |  total : 1659.4690  |  number it  :      998

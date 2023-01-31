@@ -34,8 +34,8 @@
                      mode_opti : thkstrflowctrl
           opti_thr_strflowctrl : 78.0
             opti_init_zero_thk : False
-           opti_regu_param_thk : 10.0
-   opti_regu_param_strflowctrl : 1.0
+           opti_regu_param_thk : 10
+   opti_regu_param_strflowctrl : 1
  opti_smooth_anisotropy_factor : 0.2
          opti_convexity_weight : 0.002
              opti_usurfobs_std : 5
