@@ -12,4 +12,4 @@ module purge
 module load anaconda
 conda activate igm
 
-python advance.py
+python advance.py >> console-log.txt

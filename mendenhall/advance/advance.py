@@ -33,13 +33,13 @@ glacier.config.init_arrhenius = 78
 
 # Simulation variables
 glacier.config.tstart = -1000
-glacier.config.tend = -990
+glacier.config.tend = -900
 glacier.config.tsave = 1
 glacier.config.cfl = 0.01
 glacier.config.vars_to_save = ["topg", "usurf", "thk", "smb", 
                                "velbar_mag", "velsurf_mag", 
                                "slidingco", "arrhenius"]
-                               
+
 glacier.config.usegpu = True 
 glacier.saveresult = True
 
