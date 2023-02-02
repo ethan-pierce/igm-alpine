@@ -25,7 +25,7 @@ glacier.config.geology_file = './inputs/geology.nc'
 
 # Set up SMB parameters
 glacier.config.type_mass_balance = 'mysmb'
-glacier.ELA = 1100
+glacier.ELA = 1200
 glacier.gradmb = 0.003
 
 # Ice thickness smoothing parameters
@@ -34,12 +34,12 @@ glacier.config.smoothing_thk_sigma = 5
 glacier.config.smoothing_thk_update_freq = 1
 
 # Other configuration variables
-glacier.config.tstart = 2020
-glacier.config.tend = 2120
-glacier.config.tsave = 5
+glacier.config.tstart = 0
+glacier.config.tend = 100
+glacier.config.tsave = 1
 glacier.config.cfl = 0.08
 glacier.config.usegpu = True 
-glacier.config.vars_to_save = ["topg", "usurf", "thk", "smb", "velbar_mag", "velsurf_mag", "uvelsurf", "vvelsurf", "uvelbase", "vvelbase"]
+glacier.config.vars_to_save = ["topg", "usurf", "thk", "smb", "velbar_mag", "velsurf_mag", "divflux", "uvelsurf", "vvelsurf", "uvelbase", "vvelbase"]
 
 # Initialize the model
 glacier.initialize()
