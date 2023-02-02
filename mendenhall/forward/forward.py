@@ -37,7 +37,7 @@ glacier.config.smoothing_thk_update_freq = 1
 glacier.config.tstart = 2020
 glacier.config.tend = 2120
 glacier.config.tsave = 5
-glacier.config.cfl = 0.15
+glacier.config.cfl = 0.08
 glacier.config.usegpu = True 
 glacier.config.vars_to_save = ["topg", "usurf", "thk", "smb", "velbar_mag", "velsurf_mag", "uvelsurf", "vvelsurf", "uvelbase", "vvelbase"]
 
@@ -56,8 +56,5 @@ with tf.device("/GPU:0"):
         glacier.update_thk()
         glacier.update_ncdf_ex()
         glacier.update_ncdf_ts()
-
-        # Add a smoothing routine for ice thickness
-        glacier.update_smoothing_thk()
 
 glacier.print_all_comp_info()
