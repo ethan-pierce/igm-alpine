@@ -28,6 +28,11 @@ glacier.config.type_mass_balance = 'mysmb'
 glacier.ELA = 1100
 glacier.gradmb = 0.003
 
+# Ice thickness smoothing parameters
+glacier.config.smoothing_thk_filter_shape = 3
+glacier.config.smoothing_thk_sigma = 5
+glacier.config.smoothing_thk_update_freq = 1
+
 # Other configuration variables
 glacier.config.tstart = 2020
 glacier.config.tend = 2120
@@ -51,5 +56,8 @@ with tf.device("/GPU:0"):
         glacier.update_thk()
         glacier.update_ncdf_ex()
         glacier.update_ncdf_ts()
+
+        # Add a smoothing routine for ice thickness
+        glacier.update_smoothing_thk()
 
 glacier.print_all_comp_info()
