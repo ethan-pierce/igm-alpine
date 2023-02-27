@@ -26,7 +26,7 @@ glacier.config.opti_usurfobs_std = 5 # m
 
 # Regularization parameters
 glacier.config.opti_regu_param_thk = 10
-glacier.config.opti_regu_param_strflowctrl = 1
+glacier.config.opti_regu_param_strflowctrl = 10
 
 # Smoothing parameters
 glacier.config.opti_smooth_anisotropy_factor = 0.2
