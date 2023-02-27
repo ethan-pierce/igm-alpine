@@ -17,7 +17,7 @@ glacier.config.observation_file = './inputs/observation.nc'
 
 # Control and cost variables
 glacier.config.opti_control = ['thk', 'strflowctrl', 'usurf']
-glacier.config.opti_cost = ['velsurf', 'thk', 'icemask']
+glacier.config.opti_cost = ['velsurf', 'thk', 'usurf', 'icemask']
 
 # Set confidence levels
 glacier.config.opti_velsurfobs_std = 1 # m/a
