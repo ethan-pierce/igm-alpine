@@ -20,16 +20,16 @@ glacier.config.opti_control = ['thk', 'strflowctrl', 'usurf']
 glacier.config.opti_cost = ['velsurf', 'thk', 'usurf', 'icemask']
 
 # Set confidence levels
-glacier.config.opti_velsurfobs_std = 1 # m/a
+glacier.config.opti_velsurfobs_std = 5 # m/a
 glacier.config.opti_thkobs_std = 15 # m
-glacier.config.opti_usurfobs_std = 15 # m
+glacier.config.opti_usurfobs_std = 5 # m
 
 # Regularization parameters
 glacier.config.opti_regu_param_thk = 10
 glacier.config.opti_regu_param_strflowctrl = 10
 
 # Smoothing and convexity parameters
-glacier.config.opti_smooth_anisotropy_factor = 0.6
+glacier.config.opti_smooth_anisotropy_factor = 0.2
 glacier.config.opti_convexity_weight = 0.002
 
 # Computational parameters
