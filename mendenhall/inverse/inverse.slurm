@@ -3,7 +3,7 @@
 #SBATCH --partition=ami100
 #SBATCH --job-name=inverse
 #SBATCH --output=inverse.%j.out
-#SBATCH --time=02:00:00
+#SBATCH --time=04:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --gres=gpu 

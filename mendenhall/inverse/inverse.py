@@ -29,13 +29,13 @@ glacier.config.opti_regu_param_thk = 10
 glacier.config.opti_regu_param_strflowctrl = 10
 
 # Smoothing and convexity parameters
-glacier.config.opti_smooth_anisotropy_factor = 0.2
+glacier.config.opti_smooth_anisotropy_factor = 0.6
 glacier.config.opti_convexity_weight = 0.002
 
 # Computational parameters
-glacier.config.opti_nbitmax = 2000
+glacier.config.opti_nbitmax = 5000
 glacier.config.opti_step_size = 0.001
-glacier.config.opti_init_zero_thk = False
+glacier.config.opti_init_zero_thk = True
 
 # Save variables
 glacier.config.opti_vars_to_save = ['topg', 'usurf', 'thk', 'strflowctrl', 'arrhenius', 'slidingco', 
