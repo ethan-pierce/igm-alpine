@@ -1,0 +1,2 @@
+                 All  |  mean time per it :      nan  |  total :   0.0000  |  number it :        0
+            Optimize  |  mean time per it :   1.7008  |  total : 8500.4399  |  number it :     4998
