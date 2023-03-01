@@ -1,0 +1,185 @@
+2023-02-28 12:15:50.973380: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE4.1 SSE4.2 AVX AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-02-28 12:15:51.155913: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+2023-02-28 12:15:51.168087: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 2795030000 Hz
+/projects/etpi5866/igm/src/igm.py:3157: RuntimeWarning: invalid value encountered in divide
+  costs[:, i] /= np.max(costs[:, i])
+/projects/etpi5866/software/anaconda/envs/igm/lib/python3.8/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/projects/etpi5866/software/anaconda/envs/igm/lib/python3.8/site-packages/numpy/core/_methods.py:190: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+Build IGM class
++++++++++++++++++++ START IGM ++++++++++++++++++++++++++++++++++++++++++
+PARAMETERS ARE ...... 
+                   working_dir : 
+                  geology_file : geology.nc
+                      resample : 1
+                        tstart : 0.0
+                          tend : 100.0
+                restartingfile : 
+                     verbosity : 0
+                         tsave : 10
+                   plot_result : False
+                     plot_live : False
+                        usegpu : True
+                          stop : False
+              init_strflowctrl : 78
+                init_slidingco : 0
+                init_arrhenius : 78
+                            dz : 20
+                        maxthk : 1000.0
+              clim_update_freq : 1
+                  type_climate : 
+               erosion_include : False
+                   erosion_cst : 2.7e-07
+                   erosion_exp : 2
+           erosion_update_freq : 100
+                uplift_include : False
+                   uplift_rate : 0.002
+            uplift_update_freq : 100
+        iceflow_model_lib_path : /projects/etpi5866/igm/model-lib/f15_cfsflow_GJ_22_a/50
+          multiple_window_size : 0
+              force_max_velbar : 0
+                      optimize : False
+             opti_vars_to_save : ['topg', 'usurf', 'thk', 'strflowctrl', 'arrhenius', 'slidingco', 'velsurf_mag', 'velsurfobs_mag', 'divflux']
+              observation_file : ./inputs/observation.nc
+             thk_profiles_file : 
+                     mode_opti : thkstrflowctrl
+          opti_thr_strflowctrl : 78.0
+            opti_init_zero_thk : True
+           opti_regu_param_thk : 10
+   opti_regu_param_strflowctrl : 10
+ opti_smooth_anisotropy_factor : 0.2
+         opti_convexity_weight : 0.002
+             opti_usurfobs_std : 5
+          opti_strflowctrl_std : 5.0
+           opti_velsurfobs_std : 5
+               opti_thkobs_std : 15
+           opti_divfluxobs_std : 1.0
+                  opti_control : ['thk', 'strflowctrl', 'usurf']
+                     opti_cost : ['velsurf', 'thk', 'usurf', 'icemask']
+                  opti_nbitmin : 50
+                  opti_nbitmax : 5000
+                opti_step_size : 0.001
+       opti_make_holes_in_data : 0
+              opti_output_freq : 50
+        geology_optimized_file : geology-optimized.nc
+                  vars_to_save : ['topg', 'usurf', 'thk', 'smb', 'velbar_mag', 'velsurf_mag']
+                       varplot : velbar_mag
+                   varplot_max : 500
+                mb_update_freq : 1
+             type_mass_balance : simple
+                    mb_scaling : 1.0
+                mb_simple_file : mb_simple_param.txt
+            smb_model_lib_path : ../../model-lib/smb_meteoswissglamos
+    smoothing_thk_filter_shape : 3
+           smoothing_thk_sigma : 3
+     smoothing_thk_update_freq : 100
+                           cfl : 0.3
+                         dtmax : 10.0
+               tracking_method : 3d
+             frequency_seeding : 10
+               density_seeding : 0.2
+ OPTI, step     0 , ICE_VOL:    0.00 , COST_U:   12.08 , COST_H:   68.89 , COST_D :    0.00 , COST_S :    0.00 , REGU_H :    0.00 , REGU_A :    0.00 
+ OPTI, step    50 , ICE_VOL:    9.30 , COST_U:   12.46 , COST_H:   34.07 , COST_D :    0.00 , COST_S :    0.02 , REGU_H :  -32.96 , REGU_A :    0.00 
+ OPTI, step   100 , ICE_VOL:   15.87 , COST_U:   12.83 , COST_H:   16.14 , COST_D :    0.00 , COST_S :    0.24 , REGU_H :  -54.77 , REGU_A :    0.00 
+ OPTI, step   150 , ICE_VOL:   20.85 , COST_U:   12.70 , COST_H:    8.03 , COST_D :    0.00 , COST_S :    0.60 , REGU_H :  -70.79 , REGU_A :    0.00 
+ OPTI, step   200 , ICE_VOL:   24.63 , COST_U:   12.17 , COST_H:    5.40 , COST_D :    0.00 , COST_S :    0.99 , REGU_H :  -82.66 , REGU_A :    0.00 
+ OPTI, step   250 , ICE_VOL:   27.45 , COST_U:   11.39 , COST_H:    5.62 , COST_D :    0.00 , COST_S :    1.34 , REGU_H :  -91.41 , REGU_A :    0.00 
+ OPTI, step   300 , ICE_VOL:   29.53 , COST_U:   10.27 , COST_H:    7.17 , COST_D :    0.00 , COST_S :    1.65 , REGU_H :  -97.76 , REGU_A :    0.02 
+ OPTI, step   350 , ICE_VOL:   31.06 , COST_U:    8.83 , COST_H:    9.17 , COST_D :    0.00 , COST_S :    1.92 , REGU_H : -102.34 , REGU_A :    0.04 
+ OPTI, step   400 , ICE_VOL:   32.15 , COST_U:    7.70 , COST_H:   11.12 , COST_D :    0.00 , COST_S :    2.14 , REGU_H : -105.61 , REGU_A :    0.04 
+ OPTI, step   450 , ICE_VOL:   32.90 , COST_U:    6.92 , COST_H:   12.74 , COST_D :    0.00 , COST_S :    2.30 , REGU_H : -107.86 , REGU_A :    0.04 
+ OPTI, step   500 , ICE_VOL:   33.40 , COST_U:    6.34 , COST_H:   13.97 , COST_D :    0.00 , COST_S :    2.41 , REGU_H : -109.36 , REGU_A :    0.04 
+ OPTI, step   550 , ICE_VOL:   33.73 , COST_U:    5.96 , COST_H:   14.85 , COST_D :    0.00 , COST_S :    2.49 , REGU_H : -110.34 , REGU_A :    0.04 
+ OPTI, step   600 , ICE_VOL:   33.95 , COST_U:    5.67 , COST_H:   15.44 , COST_D :    0.00 , COST_S :    2.54 , REGU_H : -110.98 , REGU_A :    0.04 
+ OPTI, step   650 , ICE_VOL:   34.08 , COST_U:    5.47 , COST_H:   15.83 , COST_D :    0.00 , COST_S :    2.58 , REGU_H : -111.39 , REGU_A :    0.04 
+ OPTI, step   700 , ICE_VOL:   34.17 , COST_U:    5.30 , COST_H:   16.08 , COST_D :    0.00 , COST_S :    2.60 , REGU_H : -111.64 , REGU_A :    0.04 
+ OPTI, step   750 , ICE_VOL:   34.22 , COST_U:    5.16 , COST_H:   16.24 , COST_D :    0.00 , COST_S :    2.62 , REGU_H : -111.80 , REGU_A :    0.04 
+ OPTI, step   800 , ICE_VOL:   34.25 , COST_U:    5.03 , COST_H:   16.34 , COST_D :    0.00 , COST_S :    2.63 , REGU_H : -111.90 , REGU_A :    0.05 
+ OPTI, step   850 , ICE_VOL:   34.27 , COST_U:    4.93 , COST_H:   16.41 , COST_D :    0.00 , COST_S :    2.65 , REGU_H : -111.96 , REGU_A :    0.05 
+ OPTI, step   900 , ICE_VOL:   34.29 , COST_U:    4.86 , COST_H:   16.45 , COST_D :    0.00 , COST_S :    2.66 , REGU_H : -112.00 , REGU_A :    0.05 
+ OPTI, step   950 , ICE_VOL:   34.30 , COST_U:    4.79 , COST_H:   16.48 , COST_D :    0.00 , COST_S :    2.67 , REGU_H : -112.03 , REGU_A :    0.05 
+ OPTI, step  1000 , ICE_VOL:   34.30 , COST_U:    4.73 , COST_H:   16.50 , COST_D :    0.00 , COST_S :    2.67 , REGU_H : -112.05 , REGU_A :    0.05 
+ OPTI, step  1050 , ICE_VOL:   34.31 , COST_U:    4.69 , COST_H:   16.51 , COST_D :    0.00 , COST_S :    2.68 , REGU_H : -112.06 , REGU_A :    0.05 
+ OPTI, step  1100 , ICE_VOL:   34.31 , COST_U:    4.65 , COST_H:   16.52 , COST_D :    0.00 , COST_S :    2.68 , REGU_H : -112.08 , REGU_A :    0.05 
+ OPTI, step  1150 , ICE_VOL:   34.31 , COST_U:    4.61 , COST_H:   16.53 , COST_D :    0.00 , COST_S :    2.68 , REGU_H : -112.08 , REGU_A :    0.05 
+ OPTI, step  1200 , ICE_VOL:   34.32 , COST_U:    4.57 , COST_H:   16.53 , COST_D :    0.00 , COST_S :    2.69 , REGU_H : -112.08 , REGU_A :    0.05 
+ OPTI, step  1250 , ICE_VOL:   34.32 , COST_U:    4.53 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.69 , REGU_H : -112.09 , REGU_A :    0.05 
+ OPTI, step  1300 , ICE_VOL:   34.32 , COST_U:    4.50 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.69 , REGU_H : -112.09 , REGU_A :    0.05 
+ OPTI, step  1350 , ICE_VOL:   34.32 , COST_U:    4.47 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.69 , REGU_H : -112.10 , REGU_A :    0.05 
+ OPTI, step  1400 , ICE_VOL:   34.32 , COST_U:    4.44 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.69 , REGU_H : -112.10 , REGU_A :    0.05 
+ OPTI, step  1450 , ICE_VOL:   34.32 , COST_U:    4.41 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.69 , REGU_H : -112.10 , REGU_A :    0.05 
+ OPTI, step  1500 , ICE_VOL:   34.32 , COST_U:    4.39 , COST_H:   16.55 , COST_D :    0.00 , COST_S :    2.69 , REGU_H : -112.10 , REGU_A :    0.05 
+ OPTI, step  1550 , ICE_VOL:   34.32 , COST_U:    4.36 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.69 , REGU_H : -112.10 , REGU_A :    0.05 
+ OPTI, step  1600 , ICE_VOL:   34.32 , COST_U:    4.34 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.69 , REGU_H : -112.10 , REGU_A :    0.05 
+ OPTI, step  1650 , ICE_VOL:   34.32 , COST_U:    4.32 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.69 , REGU_H : -112.10 , REGU_A :    0.05 
+ OPTI, step  1700 , ICE_VOL:   34.32 , COST_U:    4.31 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.69 , REGU_H : -112.10 , REGU_A :    0.05 
+ OPTI, step  1750 , ICE_VOL:   34.32 , COST_U:    4.29 , COST_H:   16.53 , COST_D :    0.00 , COST_S :    2.69 , REGU_H : -112.10 , REGU_A :    0.05 
+ OPTI, step  1800 , ICE_VOL:   34.32 , COST_U:    4.28 , COST_H:   16.53 , COST_D :    0.00 , COST_S :    2.69 , REGU_H : -112.10 , REGU_A :    0.05 
+ OPTI, step  1850 , ICE_VOL:   34.32 , COST_U:    4.27 , COST_H:   16.53 , COST_D :    0.00 , COST_S :    2.69 , REGU_H : -112.09 , REGU_A :    0.05 
+ OPTI, step  1900 , ICE_VOL:   34.32 , COST_U:    4.25 , COST_H:   16.52 , COST_D :    0.00 , COST_S :    2.69 , REGU_H : -112.09 , REGU_A :    0.05 
+ OPTI, step  1950 , ICE_VOL:   34.32 , COST_U:    4.24 , COST_H:   16.52 , COST_D :    0.00 , COST_S :    2.69 , REGU_H : -112.09 , REGU_A :    0.05 
+ OPTI, step  2000 , ICE_VOL:   34.32 , COST_U:    4.24 , COST_H:   16.52 , COST_D :    0.00 , COST_S :    2.69 , REGU_H : -112.10 , REGU_A :    0.05 
+ OPTI, step  2050 , ICE_VOL:   34.32 , COST_U:    4.23 , COST_H:   16.52 , COST_D :    0.00 , COST_S :    2.69 , REGU_H : -112.10 , REGU_A :    0.05 
+ OPTI, step  2100 , ICE_VOL:   34.32 , COST_U:    4.22 , COST_H:   16.52 , COST_D :    0.00 , COST_S :    2.69 , REGU_H : -112.10 , REGU_A :    0.04 
+ OPTI, step  2150 , ICE_VOL:   34.32 , COST_U:    4.21 , COST_H:   16.52 , COST_D :    0.00 , COST_S :    2.69 , REGU_H : -112.10 , REGU_A :    0.04 
+ OPTI, step  2200 , ICE_VOL:   34.32 , COST_U:    4.21 , COST_H:   16.52 , COST_D :    0.00 , COST_S :    2.69 , REGU_H : -112.09 , REGU_A :    0.04 
+ OPTI, step  2250 , ICE_VOL:   34.32 , COST_U:    4.20 , COST_H:   16.52 , COST_D :    0.00 , COST_S :    2.69 , REGU_H : -112.10 , REGU_A :    0.04 
+ OPTI, step  2300 , ICE_VOL:   34.32 , COST_U:    4.19 , COST_H:   16.52 , COST_D :    0.00 , COST_S :    2.70 , REGU_H : -112.10 , REGU_A :    0.04 
+ OPTI, step  2350 , ICE_VOL:   34.32 , COST_U:    4.18 , COST_H:   16.53 , COST_D :    0.00 , COST_S :    2.70 , REGU_H : -112.10 , REGU_A :    0.04 
+ OPTI, step  2400 , ICE_VOL:   34.32 , COST_U:    4.17 , COST_H:   16.53 , COST_D :    0.00 , COST_S :    2.70 , REGU_H : -112.11 , REGU_A :    0.04 
+ OPTI, step  2450 , ICE_VOL:   34.32 , COST_U:    4.17 , COST_H:   16.53 , COST_D :    0.00 , COST_S :    2.70 , REGU_H : -112.11 , REGU_A :    0.04 
+ OPTI, step  2500 , ICE_VOL:   34.33 , COST_U:    4.16 , COST_H:   16.53 , COST_D :    0.00 , COST_S :    2.70 , REGU_H : -112.11 , REGU_A :    0.04 
+ OPTI, step  2550 , ICE_VOL:   34.33 , COST_U:    4.15 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.70 , REGU_H : -112.11 , REGU_A :    0.04 
+ OPTI, step  2600 , ICE_VOL:   34.33 , COST_U:    4.14 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.70 , REGU_H : -112.11 , REGU_A :    0.04 
+ OPTI, step  2650 , ICE_VOL:   34.33 , COST_U:    4.14 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.70 , REGU_H : -112.11 , REGU_A :    0.04 
+ OPTI, step  2700 , ICE_VOL:   34.33 , COST_U:    4.13 , COST_H:   16.53 , COST_D :    0.00 , COST_S :    2.70 , REGU_H : -112.11 , REGU_A :    0.04 
+ OPTI, step  2750 , ICE_VOL:   34.33 , COST_U:    4.13 , COST_H:   16.53 , COST_D :    0.00 , COST_S :    2.70 , REGU_H : -112.11 , REGU_A :    0.04 
+ OPTI, step  2800 , ICE_VOL:   34.33 , COST_U:    4.12 , COST_H:   16.53 , COST_D :    0.00 , COST_S :    2.70 , REGU_H : -112.11 , REGU_A :    0.04 
+ OPTI, step  2850 , ICE_VOL:   34.33 , COST_U:    4.11 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.70 , REGU_H : -112.12 , REGU_A :    0.04 
+ OPTI, step  2900 , ICE_VOL:   34.33 , COST_U:    4.11 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.70 , REGU_H : -112.12 , REGU_A :    0.04 
+ OPTI, step  2950 , ICE_VOL:   34.33 , COST_U:    4.10 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.70 , REGU_H : -112.12 , REGU_A :    0.04 
+ OPTI, step  3000 , ICE_VOL:   34.33 , COST_U:    4.10 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.70 , REGU_H : -112.12 , REGU_A :    0.04 
+ OPTI, step  3050 , ICE_VOL:   34.33 , COST_U:    4.09 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.70 , REGU_H : -112.12 , REGU_A :    0.04 
+ OPTI, step  3100 , ICE_VOL:   34.33 , COST_U:    4.09 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.70 , REGU_H : -112.12 , REGU_A :    0.04 
+ OPTI, step  3150 , ICE_VOL:   34.33 , COST_U:    4.09 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.70 , REGU_H : -112.12 , REGU_A :    0.04 
+ OPTI, step  3200 , ICE_VOL:   34.33 , COST_U:    4.08 , COST_H:   16.55 , COST_D :    0.00 , COST_S :    2.70 , REGU_H : -112.13 , REGU_A :    0.04 
+ OPTI, step  3250 , ICE_VOL:   34.33 , COST_U:    4.08 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.70 , REGU_H : -112.12 , REGU_A :    0.04 
+ OPTI, step  3300 , ICE_VOL:   34.33 , COST_U:    4.07 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.71 , REGU_H : -112.12 , REGU_A :    0.04 
+ OPTI, step  3350 , ICE_VOL:   34.33 , COST_U:    4.07 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.71 , REGU_H : -112.13 , REGU_A :    0.04 
+ OPTI, step  3400 , ICE_VOL:   34.33 , COST_U:    4.07 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.71 , REGU_H : -112.12 , REGU_A :    0.04 
+ OPTI, step  3450 , ICE_VOL:   34.33 , COST_U:    4.06 , COST_H:   16.55 , COST_D :    0.00 , COST_S :    2.70 , REGU_H : -112.13 , REGU_A :    0.04 
+ OPTI, step  3500 , ICE_VOL:   34.33 , COST_U:    4.06 , COST_H:   16.55 , COST_D :    0.00 , COST_S :    2.70 , REGU_H : -112.13 , REGU_A :    0.04 
+ OPTI, step  3550 , ICE_VOL:   34.33 , COST_U:    4.06 , COST_H:   16.55 , COST_D :    0.00 , COST_S :    2.71 , REGU_H : -112.13 , REGU_A :    0.04 
+ OPTI, step  3600 , ICE_VOL:   34.33 , COST_U:    4.05 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.71 , REGU_H : -112.12 , REGU_A :    0.04 
+ OPTI, step  3650 , ICE_VOL:   34.33 , COST_U:    4.05 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.71 , REGU_H : -112.12 , REGU_A :    0.04 
+ OPTI, step  3700 , ICE_VOL:   34.33 , COST_U:    4.05 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.71 , REGU_H : -112.12 , REGU_A :    0.04 
+ OPTI, step  3750 , ICE_VOL:   34.33 , COST_U:    4.04 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.71 , REGU_H : -112.12 , REGU_A :    0.04 
+ OPTI, step  3800 , ICE_VOL:   34.33 , COST_U:    4.04 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.71 , REGU_H : -112.12 , REGU_A :    0.04 
+ OPTI, step  3850 , ICE_VOL:   34.33 , COST_U:    4.04 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.71 , REGU_H : -112.13 , REGU_A :    0.04 
+ OPTI, step  3900 , ICE_VOL:   34.33 , COST_U:    4.03 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.71 , REGU_H : -112.13 , REGU_A :    0.04 
+ OPTI, step  3950 , ICE_VOL:   34.33 , COST_U:    4.03 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.71 , REGU_H : -112.12 , REGU_A :    0.04 
+ OPTI, step  4000 , ICE_VOL:   34.33 , COST_U:    4.03 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.71 , REGU_H : -112.12 , REGU_A :    0.04 
+ OPTI, step  4050 , ICE_VOL:   34.33 , COST_U:    4.03 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.71 , REGU_H : -112.12 , REGU_A :    0.04 
+ OPTI, step  4100 , ICE_VOL:   34.33 , COST_U:    4.02 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.71 , REGU_H : -112.13 , REGU_A :    0.04 
+ OPTI, step  4150 , ICE_VOL:   34.33 , COST_U:    4.02 , COST_H:   16.55 , COST_D :    0.00 , COST_S :    2.71 , REGU_H : -112.13 , REGU_A :    0.04 
+ OPTI, step  4200 , ICE_VOL:   34.33 , COST_U:    4.02 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.71 , REGU_H : -112.13 , REGU_A :    0.04 
+ OPTI, step  4250 , ICE_VOL:   34.33 , COST_U:    4.01 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.71 , REGU_H : -112.13 , REGU_A :    0.04 
+ OPTI, step  4300 , ICE_VOL:   34.33 , COST_U:    4.01 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.71 , REGU_H : -112.12 , REGU_A :    0.04 
+ OPTI, step  4350 , ICE_VOL:   34.33 , COST_U:    4.01 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.71 , REGU_H : -112.13 , REGU_A :    0.04 
+ OPTI, step  4400 , ICE_VOL:   34.33 , COST_U:    4.01 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.71 , REGU_H : -112.13 , REGU_A :    0.04 
+ OPTI, step  4450 , ICE_VOL:   34.33 , COST_U:    4.00 , COST_H:   16.55 , COST_D :    0.00 , COST_S :    2.71 , REGU_H : -112.13 , REGU_A :    0.04 
+ OPTI, step  4500 , ICE_VOL:   34.33 , COST_U:    4.00 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.71 , REGU_H : -112.13 , REGU_A :    0.04 
+ OPTI, step  4550 , ICE_VOL:   34.33 , COST_U:    4.00 , COST_H:   16.55 , COST_D :    0.00 , COST_S :    2.71 , REGU_H : -112.13 , REGU_A :    0.04 
+ OPTI, step  4600 , ICE_VOL:   34.33 , COST_U:    4.00 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.71 , REGU_H : -112.13 , REGU_A :    0.04 
+ OPTI, step  4650 , ICE_VOL:   34.33 , COST_U:    3.99 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.71 , REGU_H : -112.12 , REGU_A :    0.04 
+ OPTI, step  4700 , ICE_VOL:   34.33 , COST_U:    3.99 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.71 , REGU_H : -112.12 , REGU_A :    0.04 
+ OPTI, step  4750 , ICE_VOL:   34.33 , COST_U:    3.99 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.71 , REGU_H : -112.12 , REGU_A :    0.04 
+ OPTI, step  4800 , ICE_VOL:   34.33 , COST_U:    3.98 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.71 , REGU_H : -112.12 , REGU_A :    0.04 
+ OPTI, step  4850 , ICE_VOL:   34.33 , COST_U:    3.98 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.71 , REGU_H : -112.12 , REGU_A :    0.04 
+ OPTI, step  4900 , ICE_VOL:   34.33 , COST_U:    3.97 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.71 , REGU_H : -112.12 , REGU_A :    0.04 
+ OPTI, step  4950 , ICE_VOL:   34.33 , COST_U:    3.97 , COST_H:   16.54 , COST_D :    0.00 , COST_S :    2.71 , REGU_H : -112.12 , REGU_A :    0.04 
+Computational statistics report:
+                 All  |  mean time per it :      nan  |  total :   0.0000  |  number it  :        0
+            Optimize  |  mean time per it :   1.6574  |  total : 8283.5747  |  number it  :     4998

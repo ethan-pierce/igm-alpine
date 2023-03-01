@@ -1,6 +1,0 @@
-                 All  |  mean time per it :      nan  |  total :   0.0000  |  number it :        0
-        Mass balance  |  mean time per it :   0.0005  |  total :   0.0488  |  number it :       98
-            Ice flow  |  mean time per it :   0.3800  |  total : 632.6432  |  number it :     1665
-           Time step  |  mean time per it :   0.0005  |  total :   0.8046  |  number it :     1664
-           Transport  |  mean time per it :   0.0019  |  total :   3.2145  |  number it :     1664
-        Outputs ncdf  |  mean time per it :   0.0486  |  total :   4.8117  |  number it :       99
