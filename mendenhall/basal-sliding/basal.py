@@ -52,7 +52,7 @@ with tf.device("/GPU:0"):
     glacier.initialize_fields()
     glacier.optimize()
 
-glacier.print_all_comp_info()
+# glacier.print_all_comp_info()
 
 ####################################
 # Section 2: Run the forward model #
@@ -62,26 +62,27 @@ glacier.print_all_comp_info()
 shutil.copyfile('./geology-optimized.nc', './inputs/geology.nc')
 
 # Configure a new instance of IGM
-glacier = Igm()
+model = Igm()
 
 # Point to ice flow emulator 
-glacier.config.iceflow_model_lib_path = '/projects/' + USER + '/igm/model-lib/f15_cfsflow_GJ_22_a/50'
+model.config.iceflow_model_lib_path = '/projects/' + USER + '/igm/model-lib/f15_cfsflow_GJ_22_a/50'
 
 # Point to geology file
-glacier.config.geology_file = './inputs/geology.nc'
+model.config.geology_file = './inputs/geology.nc'
 
 # Configure the model
-glacier.config.usegpu = True
-glacier.config.vars_to_save = ["topg", "usurf", "thk", "velbar_mag", "velsurf_mag", "divflux", "uvelsurf", "vvelsurf", "uvelbase", "vvelbase"]
+model.config.usegpu = True
+model.config.vars_to_save = ["topg", "usurf", "thk", "velbar_mag", "velsurf_mag", "divflux", "uvelsurf", "vvelsurf", "uvelbase", "vvelbase"]
 
 # Initialize the model
-glacier.initialize()
+model.initialize()
 
 # Run the forward model
 with tf.device("/GPU:0"):
-    glacier.load_ncdf_data(glacier.config.geology_file)
-    glacier.initialize_fields()
+    model.load_ncdf_data(model.config.geology_file)
+    model.initialize_fields()
+    model.update_iceflow()
+    model.update_ncdf_ex()
+    model.update_ncdf_ts()
 
-    glacier.update_iceflow()
-
-glacier.print_all_comp_info()
+# model.print_all_comp_info()
