@@ -23,7 +23,7 @@ glacier.config.observation_file = './inputs/observation.nc'
 
 # Set control and cost variables
 glacier.config.opti_control = ['thk', 'strflowctrl', 'usurf']
-glacier.config.opti_cost = ['velsurf', 'usurf', 'icemask']
+glacier.config.opti_cost = ['velsurf', 'thk', 'usurf', 'icemask']
 
 # Set regularization parameters
 glacier.config.opti_regu_param_thk = 10.0
@@ -34,7 +34,7 @@ glacier.config.opti_smooth_anisotropy_factor = 0.2
 glacier.config.opti_convexity_weight = 0.002
 
 # Set computational parameters
-glacier.config.opti_nbitmax = 1000
+glacier.config.opti_nbitmax = 2000
 glacier.config.opti_output_freq = 50
 glacier.config.opti_step_size = 0.01
 glacier.config.opti_init_zero_thk = False
