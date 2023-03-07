@@ -1,0 +1,190 @@
+2023-03-07 10:34:23.772151: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE4.1 SSE4.2 AVX AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-07 10:34:24.723841: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+2023-03-07 10:34:24.846397: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 2794515000 Hz
+/projects/etpi5866/igm/src/igm.py:3157: RuntimeWarning: invalid value encountered in divide
+  costs[:, i] /= np.max(costs[:, i])
+Build IGM class
++++++++++++++++++++ START IGM ++++++++++++++++++++++++++++++++++++++++++
+PARAMETERS ARE ...... 
+                   working_dir : 
+                  geology_file : geology.nc
+                      resample : 1
+                        tstart : 0.0
+                          tend : 100.0
+                restartingfile : 
+                     verbosity : 0
+                         tsave : 10
+                   plot_result : False
+                     plot_live : False
+                        usegpu : True
+                          stop : False
+              init_strflowctrl : 78
+                init_slidingco : 0
+                init_arrhenius : 78
+                            dz : 20
+                        maxthk : 1000.0
+              clim_update_freq : 1
+                  type_climate : 
+               erosion_include : False
+                   erosion_cst : 2.7e-07
+                   erosion_exp : 2
+           erosion_update_freq : 100
+                uplift_include : False
+                   uplift_rate : 0.002
+            uplift_update_freq : 100
+        iceflow_model_lib_path : /projects/etpi5866/igm/model-lib/f15_cfsflow_GJ_22_a/50
+          multiple_window_size : 0
+              force_max_velbar : 0
+                      optimize : False
+             opti_vars_to_save : ['topg', 'usurf', 'thk', 'strflowctrl', 'arrhenius', 'slidingco', 'velsurf_mag', 'velsurfobs_mag', 'divflux']
+              observation_file : ./inputs/observation.nc
+             thk_profiles_file : 
+                     mode_opti : thkstrflowctrl
+          opti_thr_strflowctrl : 78.0
+            opti_init_zero_thk : False
+           opti_regu_param_thk : 10.0
+   opti_regu_param_strflowctrl : 5.0
+ opti_smooth_anisotropy_factor : 0.2
+         opti_convexity_weight : 0.002
+             opti_usurfobs_std : 5.0
+          opti_strflowctrl_std : 5.0
+           opti_velsurfobs_std : 3.0
+               opti_thkobs_std : 5.0
+           opti_divfluxobs_std : 1.0
+                  opti_control : ['thk', 'strflowctrl', 'usurf']
+                     opti_cost : ['velsurf', 'thk', 'usurf', 'icemask']
+                  opti_nbitmin : 50
+                  opti_nbitmax : 2000
+                opti_step_size : 0.01
+       opti_make_holes_in_data : 0
+              opti_output_freq : 50
+        geology_optimized_file : geology-optimized.nc
+                  vars_to_save : ['topg', 'usurf', 'thk', 'smb', 'velbar_mag', 'velsurf_mag']
+                       varplot : velbar_mag
+                   varplot_max : 500
+                mb_update_freq : 1
+             type_mass_balance : simple
+                    mb_scaling : 1.0
+                mb_simple_file : mb_simple_param.txt
+            smb_model_lib_path : ../../model-lib/smb_meteoswissglamos
+    smoothing_thk_filter_shape : 3
+           smoothing_thk_sigma : 3
+     smoothing_thk_update_freq : 100
+                           cfl : 0.3
+                         dtmax : 10.0
+               tracking_method : 3d
+             frequency_seeding : 10
+               density_seeding : 0.2
+ OPTI, step     0 , ICE_VOL:   24.83 , COST_U:   72.65 , COST_H:    0.00 , COST_D :    0.00 , COST_S :    0.00 , REGU_H :  -18.75 , REGU_A :    0.00 
+ OPTI, step    50 , ICE_VOL:   25.43 , COST_U:   24.34 , COST_H:   10.72 , COST_D :    0.00 , COST_S :    2.16 , REGU_H :  -61.41 , REGU_A :    0.61 
+ OPTI, step   100 , ICE_VOL:   25.36 , COST_U:   15.94 , COST_H:   10.07 , COST_D :    0.00 , COST_S :    3.21 , REGU_H :  -62.60 , REGU_A :    0.43 
+ OPTI, step   150 , ICE_VOL:   25.32 , COST_U:   12.89 , COST_H:    9.87 , COST_D :    0.00 , COST_S :    3.68 , REGU_H :  -63.24 , REGU_A :    0.35 
+ OPTI, step   200 , ICE_VOL:   25.28 , COST_U:   11.49 , COST_H:    9.75 , COST_D :    0.00 , COST_S :    3.88 , REGU_H :  -63.61 , REGU_A :    0.31 
+ OPTI, step   250 , ICE_VOL:   25.26 , COST_U:   10.83 , COST_H:    9.67 , COST_D :    0.00 , COST_S :    3.95 , REGU_H :  -63.84 , REGU_A :    0.29 
+ OPTI, step   300 , ICE_VOL:   25.25 , COST_U:   10.41 , COST_H:    9.65 , COST_D :    0.00 , COST_S :    3.99 , REGU_H :  -64.02 , REGU_A :    0.28 
+ OPTI, step   350 , ICE_VOL:   25.24 , COST_U:   10.13 , COST_H:    9.63 , COST_D :    0.00 , COST_S :    4.01 , REGU_H :  -64.12 , REGU_A :    0.28 
+ OPTI, step   400 , ICE_VOL:   25.24 , COST_U:    9.95 , COST_H:    9.62 , COST_D :    0.00 , COST_S :    4.02 , REGU_H :  -64.20 , REGU_A :    0.27 
+ OPTI, step   450 , ICE_VOL:   25.23 , COST_U:    9.79 , COST_H:    9.61 , COST_D :    0.00 , COST_S :    4.03 , REGU_H :  -64.24 , REGU_A :    0.28 
+ OPTI, step   500 , ICE_VOL:   25.23 , COST_U:    9.66 , COST_H:    9.60 , COST_D :    0.00 , COST_S :    4.04 , REGU_H :  -64.28 , REGU_A :    0.28 
+ OPTI, step   550 , ICE_VOL:   25.23 , COST_U:    9.55 , COST_H:    9.60 , COST_D :    0.00 , COST_S :    4.04 , REGU_H :  -64.30 , REGU_A :    0.28 
+ OPTI, step   600 , ICE_VOL:   25.22 , COST_U:    9.46 , COST_H:    9.60 , COST_D :    0.00 , COST_S :    4.04 , REGU_H :  -64.31 , REGU_A :    0.28 
+ OPTI, step   650 , ICE_VOL:   25.22 , COST_U:    9.36 , COST_H:    9.59 , COST_D :    0.00 , COST_S :    4.04 , REGU_H :  -64.32 , REGU_A :    0.28 
+ OPTI, step   700 , ICE_VOL:   25.22 , COST_U:    9.28 , COST_H:    9.59 , COST_D :    0.00 , COST_S :    4.05 , REGU_H :  -64.32 , REGU_A :    0.28 
+ OPTI, step   750 , ICE_VOL:   25.22 , COST_U:    9.22 , COST_H:    9.59 , COST_D :    0.00 , COST_S :    4.05 , REGU_H :  -64.33 , REGU_A :    0.28 
+ OPTI, step   800 , ICE_VOL:   25.22 , COST_U:    9.17 , COST_H:    9.58 , COST_D :    0.00 , COST_S :    4.06 , REGU_H :  -64.32 , REGU_A :    0.29 
+ OPTI, step   850 , ICE_VOL:   25.22 , COST_U:    9.13 , COST_H:    9.57 , COST_D :    0.00 , COST_S :    4.05 , REGU_H :  -64.33 , REGU_A :    0.28 
+ OPTI, step   900 , ICE_VOL:   25.22 , COST_U:    9.09 , COST_H:    9.58 , COST_D :    0.00 , COST_S :    4.06 , REGU_H :  -64.34 , REGU_A :    0.28 
+ OPTI, step   950 , ICE_VOL:   25.21 , COST_U:    9.05 , COST_H:    9.57 , COST_D :    0.00 , COST_S :    4.06 , REGU_H :  -64.34 , REGU_A :    0.29 
+ OPTI, step  1000 , ICE_VOL:   25.21 , COST_U:    9.01 , COST_H:    9.56 , COST_D :    0.00 , COST_S :    4.06 , REGU_H :  -64.33 , REGU_A :    0.29 
+ OPTI, step  1050 , ICE_VOL:   25.21 , COST_U:    8.98 , COST_H:    9.55 , COST_D :    0.00 , COST_S :    4.06 , REGU_H :  -64.32 , REGU_A :    0.30 
+ OPTI, step  1100 , ICE_VOL:   25.21 , COST_U:    8.95 , COST_H:    9.56 , COST_D :    0.00 , COST_S :    4.06 , REGU_H :  -64.32 , REGU_A :    0.27 
+ OPTI, step  1150 , ICE_VOL:   25.21 , COST_U:    8.93 , COST_H:    9.55 , COST_D :    0.00 , COST_S :    4.06 , REGU_H :  -64.31 , REGU_A :    0.28 
+ OPTI, step  1200 , ICE_VOL:   25.21 , COST_U:    8.90 , COST_H:    9.55 , COST_D :    0.00 , COST_S :    4.06 , REGU_H :  -64.32 , REGU_A :    0.29 
+ OPTI, step  1250 , ICE_VOL:   25.21 , COST_U:    8.88 , COST_H:    9.55 , COST_D :    0.00 , COST_S :    4.06 , REGU_H :  -64.32 , REGU_A :    0.28 
+ OPTI, step  1300 , ICE_VOL:   25.21 , COST_U:    8.86 , COST_H:    9.55 , COST_D :    0.00 , COST_S :    4.05 , REGU_H :  -64.32 , REGU_A :    0.29 
+ OPTI, step  1350 , ICE_VOL:   25.21 , COST_U:    8.85 , COST_H:    9.55 , COST_D :    0.00 , COST_S :    4.05 , REGU_H :  -64.33 , REGU_A :    0.28 
+ OPTI, step  1400 , ICE_VOL:   25.21 , COST_U:    8.83 , COST_H:    9.55 , COST_D :    0.00 , COST_S :    4.05 , REGU_H :  -64.32 , REGU_A :    0.28 
+ OPTI, step  1450 , ICE_VOL:   25.21 , COST_U:    8.81 , COST_H:    9.54 , COST_D :    0.00 , COST_S :    4.05 , REGU_H :  -64.31 , REGU_A :    0.28 
+ OPTI, step  1500 , ICE_VOL:   25.21 , COST_U:    8.80 , COST_H:    9.55 , COST_D :    0.00 , COST_S :    4.05 , REGU_H :  -64.32 , REGU_A :    0.28 
+ OPTI, step  1550 , ICE_VOL:   25.21 , COST_U:    8.78 , COST_H:    9.55 , COST_D :    0.00 , COST_S :    4.05 , REGU_H :  -64.32 , REGU_A :    0.29 
+ OPTI, step  1600 , ICE_VOL:   25.21 , COST_U:    8.77 , COST_H:    9.55 , COST_D :    0.00 , COST_S :    4.05 , REGU_H :  -64.32 , REGU_A :    0.29 
+ OPTI, step  1650 , ICE_VOL:   25.21 , COST_U:    8.76 , COST_H:    9.55 , COST_D :    0.00 , COST_S :    4.05 , REGU_H :  -64.32 , REGU_A :    0.27 
+ OPTI, step  1700 , ICE_VOL:   25.21 , COST_U:    8.74 , COST_H:    9.54 , COST_D :    0.00 , COST_S :    4.05 , REGU_H :  -64.31 , REGU_A :    0.30 
+ OPTI, step  1750 , ICE_VOL:   25.21 , COST_U:    8.73 , COST_H:    9.54 , COST_D :    0.00 , COST_S :    4.05 , REGU_H :  -64.32 , REGU_A :    0.28 
+ OPTI, step  1800 , ICE_VOL:   25.21 , COST_U:    8.71 , COST_H:    9.54 , COST_D :    0.00 , COST_S :    4.05 , REGU_H :  -64.32 , REGU_A :    0.29 
+ OPTI, step  1850 , ICE_VOL:   25.21 , COST_U:    8.70 , COST_H:    9.54 , COST_D :    0.00 , COST_S :    4.05 , REGU_H :  -64.32 , REGU_A :    0.28 
+ OPTI, step  1900 , ICE_VOL:   25.21 , COST_U:    8.69 , COST_H:    9.54 , COST_D :    0.00 , COST_S :    4.05 , REGU_H :  -64.32 , REGU_A :    0.27 
+ OPTI, step  1950 , ICE_VOL:   25.21 , COST_U:    8.68 , COST_H:    9.54 , COST_D :    0.00 , COST_S :    4.05 , REGU_H :  -64.32 , REGU_A :    0.28 
+Build IGM class
++++++++++++++++++++ START IGM ++++++++++++++++++++++++++++++++++++++++++
+PARAMETERS ARE ...... 
+                   working_dir : 
+                  geology_file : ./inputs/geology.nc
+                      resample : 1
+                        tstart : 0.0
+                          tend : 0.1
+                restartingfile : 
+                     verbosity : 0
+                         tsave : 0.1
+                   plot_result : False
+                     plot_live : False
+                        usegpu : True
+                          stop : False
+              init_strflowctrl : 78
+                init_slidingco : 0
+                init_arrhenius : 78
+                            dz : 20
+                        maxthk : 1000.0
+              clim_update_freq : 1
+                  type_climate : 
+               erosion_include : False
+                   erosion_cst : 2.7e-07
+                   erosion_exp : 2
+           erosion_update_freq : 100
+                uplift_include : False
+                   uplift_rate : 0.002
+            uplift_update_freq : 100
+        iceflow_model_lib_path : /projects/etpi5866/igm/model-lib/f15_cfsflow_GJ_22_a/50
+          multiple_window_size : 0
+              force_max_velbar : 0
+                      optimize : False
+             opti_vars_to_save : ['topg', 'usurf', 'thk', 'strflowctrl', 'arrhenius', 'slidingco', 'velsurf_mag', 'velsurfobs_mag', 'divflux']
+              observation_file : observation.nc
+             thk_profiles_file : 
+                     mode_opti : thkstrflowctrl
+          opti_thr_strflowctrl : 78.0
+            opti_init_zero_thk : False
+           opti_regu_param_thk : 10.0
+   opti_regu_param_strflowctrl : 1.0
+ opti_smooth_anisotropy_factor : 0.2
+         opti_convexity_weight : 0.002
+             opti_usurfobs_std : 5.0
+          opti_strflowctrl_std : 5.0
+           opti_velsurfobs_std : 3.0
+               opti_thkobs_std : 5.0
+           opti_divfluxobs_std : 1.0
+                  opti_control : ['thk', 'strflowctrl', 'usurf']
+                     opti_cost : ['velsurf', 'thk', 'usurf', 'divfluxfcz', 'icemask']
+                  opti_nbitmin : 50
+                  opti_nbitmax : 1000
+                opti_step_size : 0.001
+       opti_make_holes_in_data : 0
+              opti_output_freq : 50
+        geology_optimized_file : geology-optimized.nc
+                  vars_to_save : ['topg', 'usurf', 'thk', 'velbar_mag', 'velsurf_mag', 'divflux', 'uvelsurf', 'vvelsurf', 'uvelbase', 'vvelbase']
+                       varplot : velbar_mag
+                   varplot_max : 500
+                mb_update_freq : 1
+             type_mass_balance : simple
+                    mb_scaling : 1.0
+                mb_simple_file : mb_simple_param.txt
+            smb_model_lib_path : ../../model-lib/smb_meteoswissglamos
+    smoothing_thk_filter_shape : 3
+           smoothing_thk_sigma : 3
+     smoothing_thk_update_freq : 100
+                           cfl : 0.3
+                         dtmax : 10.0
+               tracking_method : 3d
+             frequency_seeding : 10
+               density_seeding : 0.2
