@@ -1,3 +1,4 @@
 /mendenhall/advance/ex.nc
 /mendenhall/forward/outputs/*/ex.nc
 /mendenhall/inverse/outputs/*/optimize.nc
+/mendenhall/*/outputs/*/optimize.nc

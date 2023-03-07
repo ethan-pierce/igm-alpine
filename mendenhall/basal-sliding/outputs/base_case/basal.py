@@ -36,7 +36,7 @@ glacier.config.opti_convexity_weight = 0.002
 # Set computational parameters
 glacier.config.opti_nbitmax = 2000
 glacier.config.opti_output_freq = 50
-glacier.config.opti_step_size = 0.01
+glacier.config.opti_step_size = 0.001
 glacier.config.opti_init_zero_thk = False
 
 # Choose variables to save
@@ -73,9 +73,6 @@ model.config.geology_file = './inputs/geology.nc'
 # Configure the model
 model.config.usegpu = True
 model.config.vars_to_save = ["topg", "usurf", "thk", "velbar_mag", "velsurf_mag", "divflux", "uvelsurf", "vvelsurf", "uvelbase", "vvelbase"]
-model.config.tstart = 0.0
-model.config.tend = 0.1
-model.config.tsave = 0.1
 
 # Initialize the model
 model.initialize()
