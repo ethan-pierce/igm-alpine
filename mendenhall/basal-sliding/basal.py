@@ -5,7 +5,6 @@ import sys
 sys.path.append('/projects/' + USER + '/igm/src')
 
 import numpy as np
-import shutil
 import tensorflow as tf
 from igm import Igm
 
@@ -36,7 +35,7 @@ glacier.config.opti_convexity_weight = 0.002
 # Set computational parameters
 glacier.config.opti_nbitmax = 2000
 glacier.config.opti_output_freq = 50
-glacier.config.opti_step_size = 0.01
+glacier.config.opti_step_size = 0.0001
 glacier.config.opti_init_zero_thk = False
 
 # Choose variables to save
@@ -58,9 +57,6 @@ with tf.device("/GPU:0"):
 # Section 2: Run the forward model #
 ####################################
 
-# Move optimized geology file to inputs
-shutil.copyfile('./geology-optimized.nc', './inputs/geology.nc')
-
 # Configure a new instance of IGM
 model = Igm()
 
@@ -68,7 +64,7 @@ model = Igm()
 model.config.iceflow_model_lib_path = '/projects/' + USER + '/igm/model-lib/f15_cfsflow_GJ_22_a/50'
 
 # Point to geology file
-model.config.geology_file = './inputs/geology.nc'
+model.config.geology_file = './geology-optimized.nc'
 
 # Configure the model
 model.config.usegpu = True
