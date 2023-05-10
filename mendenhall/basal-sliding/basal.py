@@ -1,3 +1,5 @@
+"""Run an inverse method, using IGM, over Mendenhall Glacier."""
+
 import os
 USER = os.environ.get('USER')
 
@@ -24,6 +26,15 @@ glacier.config.observation_file = './inputs/observation.nc'
 glacier.config.opti_control = ['thk', 'strflowctrl', 'usurf']
 glacier.config.opti_cost = ['velsurf', 'thk', 'usurf', 'icemask']
 
+# Set weights on control and cost variables
+glacier.config.opti_strflowctrl_std = 5.0
+glacier.config.opti_velsurfobs_std = 3.0
+glacier.config.opti_thkobs_std = 5.0
+
+# Set initial sliding regime
+glacier.config.init_slidingco = 0
+glacier.config.init_arrhenius = 75
+
 # Set regularization parameters
 glacier.config.opti_regu_param_thk = 10.0
 glacier.config.opti_regu_param_strflowctrl = 5.0
@@ -33,9 +44,9 @@ glacier.config.opti_smooth_anisotropy_factor = 0.2
 glacier.config.opti_convexity_weight = 0.002
 
 # Set computational parameters
-glacier.config.opti_nbitmax = 2000
+glacier.config.opti_nbitmax = 1000
 glacier.config.opti_output_freq = 50
-glacier.config.opti_step_size = 0.0001
+glacier.config.opti_step_size = 0.001
 glacier.config.opti_init_zero_thk = False
 
 # Choose variables to save
