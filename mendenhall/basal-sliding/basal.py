@@ -28,8 +28,6 @@ glacier.config.opti_cost = ['velsurf', 'thk', 'usurf', 'icemask']
 
 # Set weights on control and cost variables
 glacier.config.opti_strflowctrl_std = 5.0
-glacier.config.opti_velsurfobs_std = 2.5
-glacier.config.opti_thkobs_std = 25.0
 glacier.config.opti_usurfobs_std = 5.0
 
 # Set initial sliding regime
