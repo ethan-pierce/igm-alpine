@@ -27,7 +27,7 @@ glacier.config.opti_control = ['thk', 'strflowctrl', 'usurf']
 glacier.config.opti_cost = ['velsurf', 'thk', 'usurf', 'icemask']
 
 # Set weights on control and cost variables
-glacier.config.opti_strflowctrl_std = 5.0
+# glacier.config.opti_strflowctrl_std = 5.0
 glacier.config.opti_usurfobs_std = 5.0
 
 # Set initial sliding regime
@@ -36,7 +36,7 @@ glacier.config.init_arrhenius = 78
 
 # Set regularization parameters
 glacier.config.opti_regu_param_thk = 10.0
-glacier.config.opti_regu_param_strflowctrl = 5.0
+glacier.config.opti_regu_param_strflowctrl = 10.0
 
 # Set smoothing and convexity parameters
 glacier.config.opti_smooth_anisotropy_factor = 0.2
