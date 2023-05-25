@@ -7,6 +7,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --gres=gpu 
+#SBATCH --chdir=/projects/etpi5866/igm-alpine/mendenhall/ice-thk-confidence/outputs/20
 
 module purge
 module load anaconda
