@@ -20,7 +20,7 @@ glacier = Igm()
 glacier.config.iceflow_model_lib_path = '/projects/' + USER + '/igm/model-lib/f15_cfsflow_GJ_22_a/50'
 
 # Point to observation file
-glacier.config.observation_file = '../../inputs/observation_' # TODO
+glacier.config.observation_file = '../../inputs/observation_100_pct_conf.nc'
 
 # Set control and cost variables
 glacier.config.opti_control = ['thk', 'strflowctrl', 'usurf']

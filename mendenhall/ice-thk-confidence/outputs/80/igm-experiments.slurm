@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --partition=ami100
-#SBATCH --job-name=IGM
+#SBATCH --job-name=igm80
 #SBATCH --output=IGM.%j.out
 #SBATCH --time=02:00:00
 #SBATCH --nodes=1
