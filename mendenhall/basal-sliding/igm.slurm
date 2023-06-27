@@ -1,9 +1,9 @@
 #!/bin/bash
 
 #SBATCH --partition=ami100
-#SBATCH --job-name=basal
-#SBATCH --output=basal.%j.out
-#SBATCH --time=04:00:00
+#SBATCH --job-name=igm
+#SBATCH --output=igm.%j.out
+#SBATCH --time=01:30:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --gres=gpu 
