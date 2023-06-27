@@ -3,3 +3,4 @@
 /mendenhall/inverse/outputs/*/optimize.nc
 /mendenhall/*/outputs/*/optimize.nc
 /mendenhall/*/outputs/optimize.nc
+/mendenhall/*/outputs/*/*/optimize.nc

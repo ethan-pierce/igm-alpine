@@ -31,7 +31,7 @@ glacier.config.opti_strflowctrl_std = 20.0
 glacier.config.opti_thr_strflowctrl = 100
 
 glacier.config.opti_usurfobs_std = 5.0
-glacier.config.opti_thkobs_std = 20.0
+glacier.config.opti_thkobs_std = 15.0
 
 # Set initial sliding regime
 glacier.config.init_strflowctrl = 100
