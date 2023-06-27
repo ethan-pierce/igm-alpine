@@ -27,12 +27,14 @@ glacier.config.opti_control = ['thk', 'strflowctrl', 'usurf']
 glacier.config.opti_cost = ['velsurf', 'thk', 'usurf', 'icemask']
 
 # Set weights on control and cost variables
-glacier.config.opti_strflowctrl_std = 5.0
+glacier.config.opti_strflowctrl_std = 20.0
+glacier.config.opti_thr_strflowctrl = 100
+
 glacier.config.opti_usurfobs_std = 5.0
+glacier.config.opti_thkobs_std = 20.0
 
 # Set initial sliding regime
-glacier.config.init_slidingco = 0
-glacier.config.init_arrhenius = 78
+glacier.config.init_strflowctrl = 100
 
 # Set regularization parameters
 glacier.config.opti_regu_param_thk = 10.0
@@ -43,14 +45,15 @@ glacier.config.opti_smooth_anisotropy_factor = 0.2
 glacier.config.opti_convexity_weight = 0.002
 
 # Set computational parameters
-glacier.config.opti_nbitmax = 1500
+glacier.config.opti_nbitmax = 2000
 glacier.config.opti_output_freq = 50
-glacier.config.opti_step_size = 0.001
+glacier.config.opti_step_size = 0.01
 glacier.config.opti_init_zero_thk = False
 
 # Choose variables to save
 glacier.config.opti_vars_to_save = ['topg', 'usurf', 'thk', 'strflowctrl', 'arrhenius', 'slidingco', 
-                                    'velsurf_mag', 'velsurfobs_mag', 'divflux']
+                                    'velsurf_mag', 'velsurfobs_mag', 'divflux', 
+                                    'uvelbase', 'vvelbase', 'uvelsurf', 'vvelsurf']
 
 # Initialize inverse model
 glacier.initialize()
@@ -61,37 +64,9 @@ with tf.device("/GPU:0"):
     glacier.initialize_fields()
     glacier.optimize()
 
-# glacier.print_all_comp_info()
+Ub = glacier.getmag(glacier.uvelbase, glacier.vvelbase)
+Us = glacier.getmag(glacier.uvelsurf, glacier.vvelsurf)
 
-####################################
-# Section 2: Run the forward model #
-####################################
-
-# Configure a new instance of IGM
-model = Igm()
-
-# Point to ice flow emulator 
-model.config.iceflow_model_lib_path = '/projects/' + USER + '/igm/model-lib/f15_cfsflow_GJ_22_a/50'
-
-# Point to geology file
-model.config.geology_file = './geology-optimized.nc'
-
-# Configure the model
-model.config.usegpu = True
-model.config.vars_to_save = ["topg", "usurf", "thk", "velbar_mag", "velsurf_mag", "divflux", "uvelsurf", "vvelsurf", "uvelbase", "vvelbase"]
-model.config.tstart = 0.0
-model.config.tend = 0.1
-model.config.tsave = 0.1
-
-# Initialize the model
-model.initialize()
-
-# Run the forward model
-with tf.device("/GPU:0"):
-    model.load_ncdf_data(model.config.geology_file)
-    model.initialize_fields()
-    model.update_iceflow()
-    model.update_ncdf_ex()
-    model.update_ncdf_ts()
-
-# model.print_all_comp_info()
+output_dir = './outputs/scalar_thkobs_std/'
+np.savetxt(output_dir + 'sliding_velocity_magnitude.txt', Ub)
+np.savetxt(output_dir + 'surface_velocity_magnitude.txt', Us)
