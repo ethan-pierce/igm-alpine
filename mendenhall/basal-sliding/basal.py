@@ -28,7 +28,7 @@ glacier.config.opti_cost = ['velsurf', 'thk', 'usurf', 'icemask']
 
 # Set weights on control and cost variables
 glacier.config.opti_strflowctrl_std = 20.0
-glacier.config.opti_thr_strflowctrl = 100
+glacier.config.opti_thr_strflowctrl = 78.0
 
 glacier.config.opti_usurfobs_std = 5.0
 glacier.config.opti_thkobs_std = 15.0
@@ -67,6 +67,6 @@ with tf.device("/GPU:0"):
 Ub = glacier.getmag(glacier.uvelbase, glacier.vvelbase)
 Us = glacier.getmag(glacier.uvelsurf, glacier.vvelsurf)
 
-output_dir = './outputs/scalar_thkobs_std/'
+output_dir = './outputs/scalar_thkobs_std/threshold_78/'
 np.savetxt(output_dir + 'sliding_velocity_magnitude.txt', Ub)
 np.savetxt(output_dir + 'surface_velocity_magnitude.txt', Us)
