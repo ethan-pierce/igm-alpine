@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import TwoSlopeNorm, LogNorm
 plt.rcParams.update({'font.size': 20})
 
-opti = Dataset('./basal-sliding/outputs/scalar_thkobs_std/init_temperate/optimize.nc')
-geol = Dataset('./basal-sliding/outputs/scalar_thkobs_std/init_temperate/geology-optimized.nc')
+opti = Dataset('./basal-sliding/outputs/production/01/optimize.nc')
+geol = Dataset('./basal-sliding/outputs/production/01/geology-optimized.nc')
 
 velsurf_mag = np.sqrt(opti['uvelsurf'][-1]**2 + opti['vvelsurf'][-1]**2)
 velsurfobs_mag = np.sqrt(geol['uvelsurfobs'][:]**2 + geol['vvelsurfobs'][:]**2)
@@ -86,7 +86,7 @@ for i in range(len(np.ravel(ax))):
         axis.set_ylabel('Grid y')
 
 plt.tight_layout()
-plt.savefig('./basal-sliding/outputs/scalar_thkobs_std/init_temperate/inversion_results.png', dpi = 400)
+plt.savefig('./basal-sliding/outputs/production/01/inversion_results.png', dpi = 400)
 
 fields = [
     geol['thk'][:],
@@ -134,4 +134,4 @@ for i in range(len(np.ravel(ax))):
     axis.set_ylabel('Grid y')
 
 plt.tight_layout()
-plt.savefig('./basal-sliding/outputs/scalar_thkobs_std/init_temperate/boundary_conditions.png', dpi = 300)
+plt.savefig('./basal-sliding/outputs/production/01/boundary_conditions.png', dpi = 300)
