@@ -20,7 +20,7 @@ glacier = Igm()
 glacier.config.iceflow_model_lib_path = '/projects/' + USER + '/igm/model-lib/f15_cfsflow_GJ_22_a/50'
 
 # Point to observation file
-glacier.config.observation_file = './inputs/observation.nc'
+glacier.config.observation_file = '../../../inputs/observation.nc'
 
 # Set control and cost variables
 glacier.config.opti_control = ['thk', 'strflowctrl', 'usurf']
@@ -67,6 +67,6 @@ with tf.device("/GPU:0"):
 Ub = glacier.getmag(glacier.uvelbase, glacier.vvelbase)
 Us = glacier.getmag(glacier.uvelsurf, glacier.vvelsurf)
 
-output_dir = './outputs/scalar_thkobs_std/threshold_78/'
+output_dir = './'
 np.savetxt(output_dir + 'sliding_velocity_magnitude.txt', Ub)
 np.savetxt(output_dir + 'surface_velocity_magnitude.txt', Us)
