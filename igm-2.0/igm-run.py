@@ -1,32 +1,27 @@
-#!/usr/bin/env python3
-
 import sys
-# Here you need to adapt it to your own path
-sys.path.append("/home/gjouvet/IGM2/igm2-public/")
+sys.path.append("/projects/etpi5866/igm2/igm/")
 
 # Import the most important libraries
 import numpy as np
 import matplotlib.pyplot as plt
 import tensorflow as tf
 import igm
-
-from mysmb import *
  
 # Select one OPTION btw the first, keep the MANDATORY ones, un/comment OPTIONAL modules
 modules = [
-#           "prepare_data",       # OPTION 1  : download and prepare the data with OGGM
+        #    "prepare_data",       # OPTION 1  : download and prepare the data with OGGM
            "load_ncdf_data",      # OPTION 2  : read 2d data from netcdf files
-#           "load_tif_data",      # OPTION 3  : read 2d data from tif files
-#           "make_synthetic",     # OPTION 4  : make a synthetic glacier with ideal geom.
+        #    "load_tif_data",      # OPTION 3  : read 2d data from tif files
+        #    "make_synthetic",     # OPTION 4  : make a synthetic glacier with ideal geom.
            "optimize",            # OPTIONAL  : optimize unobservable variables from obs.
-           "mysmb",               # OPTIONAL  : custom surface mass balance model
+        #    "mysmb",               # OPTIONAL  : custom surface mass balance model
            "flow_dt_thk",         # MANDATORY : does update iceflow, time step and thickness
            "vertical_iceflow",    # OPTIONAL  : computes vertical velocity
-           "write_ncdf_ex",       # OPTIONAL  : write 2d state data to netcdf files
-#           "write_plot2d",       # OPTIONAL  : write 2d state plots to png files
+        #    "write_ncdf_ex",       # OPTIONAL  : write 2d state data to netcdf files
+        #    "write_plot2d",       # OPTIONAL  : write 2d state plots to png files
            "print_info",          # OPTIONAL  : print basic live-info about the model state
            "print_all_comp_info", # OPTIONAL  : report information about computation time
-           "anim3d_from_ncdf_ex", # OPTIONAL  : make a nice 3D animation of glacier evolution
+        #    "anim3d_from_ncdf_ex", # OPTIONAL  : make a nice 3D animation of glacier evolution
           ]
 
 # Collect and parse all the parameters of all model components
@@ -38,9 +33,9 @@ params = parser.parse_args()
 # Override parameters
 # params.RGI = 'RGI60-11.01450' # necessary when using prepare_data module
 params.tstart = 2000.0
-params.tend   = 2100.0
+params.tend   = 2000.0
 params.opti_nbitmax = 1000
-params.tsave  = 5
+params.tsave  = 50
 params.plot_live = True
 params.observation = True
 
