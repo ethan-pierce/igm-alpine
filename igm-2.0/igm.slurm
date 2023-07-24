@@ -10,6 +10,6 @@
 
 module purge
 module load anaconda
-conda activate igm
+conda activate igm2
 
 python igm-run.py
