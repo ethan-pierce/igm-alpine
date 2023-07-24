@@ -1,5 +1,8 @@
+import os
+USER = os.environ.get('USER')
+
 import sys
-sys.path.append("/projects/etpi5866/igm2/igm/")
+sys.path.append('/projects/' + USER + '/igm2')
 
 # Import the most important libraries
 import numpy as np
