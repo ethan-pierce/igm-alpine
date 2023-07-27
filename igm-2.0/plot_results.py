@@ -3,6 +3,7 @@ import xarray as xr
 import matplotlib.pyplot as plt
 import argparse
 
+
 def main():
     """Plot results from IGM simulation."""
     parser = argparse.ArgumentParser(description = 'Plot IGM results')
@@ -33,6 +34,7 @@ def main():
         im = plt.imshow(data[var][:])
         plt.colorbar(im)
         plt.show()
+    
 
 if __name__ == '__main__':
     main()
