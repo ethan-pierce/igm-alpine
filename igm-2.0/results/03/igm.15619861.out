@@ -1,0 +1,136 @@
+2023-07-27 15:58:28.213168: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-07-27 15:58:31.148891: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2023-07-27 15:58:31.148925: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-07-27 15:58:46.132564: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory
+2023-07-27 15:58:46.132973: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory
+2023-07-27 15:58:46.132987: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+rm: cannot remove ‘clean.sh’: No such file or directory
+2023-07-27 15:59:15.889648: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2023-07-27 15:59:15.889684: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-07-27 15:59:15.889704: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (bnode0316.rc.int.colorado.edu): /proc/driver/nvidia/version does not exist
+2023-07-27 15:59:15.964589: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/projects/etpi5866/igm2/igm/modules/physics/optimize.py:735: RuntimeWarning: invalid value encountered in divide
+  costs[:, i] /= np.max(costs[:, i])
+/projects/etpi5866/software/anaconda/envs/igm2/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3504: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/projects/etpi5866/software/anaconda/envs/igm2/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+PARAMETERS ARE ...... 
+                   working_dir : 
+                 logging_level : CRITICAL
+                  logging_file : igm.log
+                  geology_file : geology.nc
+                      resample : 1
+                     crop_data : False
+                     crop_xmin : None
+                     crop_xmax : None
+                     crop_ymin : None
+                     crop_ymax : None
+             opti_vars_to_save : ['usurf', 'thk', 'slidingco', 'velsurf_mag', 'velsurfobs_mag', 'divflux', 'icemask']
+            opti_init_zero_thk : False
+           opti_regu_param_thk : 10
+     opti_regu_param_slidingco : 1
+ opti_smooth_anisotropy_factor : 0.2
+         opti_convexity_weight : 0
+             opti_usurfobs_std : 2.0
+           opti_velsurfobs_std : 2.0
+               opti_thkobs_std : 15.0
+           opti_divfluxobs_std : 1.0
+                  opti_control : ['thk', 'slidingco']
+                     opti_cost : ['velsurf', 'icemask']
+                  opti_nbitmin : 50
+                  opti_nbitmax : 2000
+                opti_step_size : 1
+              opti_output_freq : 50
+        geology_optimized_file : geology-optimized.nc
+         plot2d_live_inversion : True
+              plot2d_inversion : True
+           write_ncdf_optimize : True
+        editor_plot2d_optimize : vs
+                  type_iceflow : emulated
+                      emulator : f21_pinnbp_GJ_23_a
+               iceflow_physics : 2
+                init_slidingco : 10000
+                init_arrhenius : 78
+                     regu_glen : 1e-05
+                 regu_weertman : 1e-10
+                      exp_glen : 3
+                  exp_weertman : 3
+                            Nz : 10
+                  vert_spacing : 4.0
+                   thr_ice_thk : 0.1
+       solve_iceflow_step_size : 1
+         solve_iceflow_nbitmax : 100
+           stop_if_no_decrease : True
+                       fieldin : ['thk', 'usurf', 'arrhenius', 'slidingco', 'dX']
+ retrain_iceflow_emulator_freq : 10
+   retrain_iceflow_emulator_lr : 2e-05
+ retrain_iceflow_emulator_nbit : 1
+retrain_iceflow_emulator_framesizemax : 750
+          multiple_window_size : 0
+              force_max_velbar : 0
+                       network : cnn
+                    activation : lrelu
+                     nb_layers : 16
+                     nb_blocks : 4
+                 nb_out_filter : 32
+                 conv_ker_size : 3
+                  dropout_rate : 0
+                        tstart : 2000.0
+                          tend : 2000.0
+                         tsave : 50
+                           cfl : 0.3
+                         dtmax : 10.0
+                     plot_live : False
+                   observation : True
+               opti_velobs_std : 5.0
+                   Step  |  ICE_VOL |  COST_U  |  COST_H  |  COST_D  |  COST_S  |   REGU_H |   REGU_S | COST_GLEN  
+OPTI 15:59:27 :        0 |    24.83 |   1792.01 |     0.00 |     0.00 |     0.00 |   508.06 |     0.00 |     6.30 |
+OPTI 16:05:04 :       50 |    23.19 |   136.61 |     0.00 |     0.00 |     0.00 |   293.02 |    10.33 |    -0.04 |
+OPTI 16:10:42 :      100 |    21.60 |   138.56 |     0.00 |     0.00 |     0.00 |   251.48 |    14.51 |    -0.20 |
+OPTI 16:16:19 :      150 |    19.82 |   138.21 |     0.00 |     0.00 |     0.00 |   220.88 |    17.76 |    -0.22 |
+OPTI 16:22:00 :      200 |    18.06 |   135.49 |     0.00 |     0.00 |     0.00 |   194.11 |    18.65 |    -0.20 |
+OPTI 16:27:39 :      250 |    16.38 |   133.50 |     0.00 |     0.00 |     0.00 |   178.00 |    17.34 |    -0.19 |
+OPTI 16:33:14 :      300 |    14.80 |   132.53 |     0.00 |     0.00 |     0.00 |   160.44 |    15.53 |    -0.17 |
+OPTI 16:38:53 :      350 |    13.39 |   132.11 |     0.00 |     0.00 |     0.00 |   143.18 |    13.82 |    -0.15 |
+OPTI 16:44:34 :      400 |    12.08 |   131.00 |     0.00 |     0.00 |     0.00 |   128.58 |    12.17 |    -0.13 |
+OPTI 16:50:12 :      450 |    10.89 |   129.36 |     0.00 |     0.00 |     0.00 |   118.44 |    10.55 |    -0.11 |
+OPTI 16:55:50 :      500 |     9.82 |   128.40 |     0.00 |     0.00 |     0.00 |   109.78 |     9.29 |    -0.10 |
+OPTI 17:01:28 :      550 |     8.86 |   127.37 |     0.00 |     0.00 |     0.00 |   104.43 |     8.32 |    -0.10 |
+OPTI 17:07:08 :      600 |     7.96 |   126.43 |     0.00 |     0.00 |     0.00 |    98.28 |     7.60 |    -0.09 |
+OPTI 17:12:46 :      650 |     7.16 |   125.22 |     0.00 |     0.00 |     0.00 |    93.80 |     6.97 |    -0.08 |
+OPTI 17:18:26 :      700 |     6.43 |   123.85 |     0.00 |     0.00 |     0.00 |    90.19 |     6.48 |    -0.07 |
+OPTI 17:24:07 :      750 |     5.83 |   122.72 |     0.00 |     0.00 |     0.00 |    85.54 |     5.94 |    -0.07 |
+OPTI 17:29:49 :      800 |     5.40 |   121.95 |     0.00 |     0.00 |     0.00 |    79.75 |     5.37 |    -0.07 |
+OPTI 17:35:36 :      850 |     5.06 |   121.58 |     0.00 |     0.00 |     0.00 |    73.12 |     5.01 |    -0.06 |
+OPTI 17:41:15 :      900 |     4.79 |   121.49 |     0.00 |     0.00 |     0.00 |    69.76 |     4.50 |    -0.06 |
+OPTI 17:46:48 :      950 |     4.58 |   121.52 |     0.00 |     0.00 |     0.00 |    67.47 |     4.17 |    -0.06 |
+OPTI 17:52:21 :     1000 |     4.42 |   121.50 |     0.00 |     0.00 |     0.00 |    65.12 |     3.93 |    -0.06 |
+OPTI 17:57:54 :     1050 |     4.29 |   121.41 |     0.00 |     0.00 |     0.00 |    62.35 |     3.69 |    -0.07 |
+OPTI 18:03:23 :     1100 |     4.18 |   121.38 |     0.00 |     0.00 |     0.00 |    60.93 |     3.53 |    -0.07 |
+OPTI 18:08:53 :     1150 |     4.08 |   121.21 |     0.00 |     0.00 |     0.00 |    60.93 |     3.30 |    -0.07 |
+OPTI 18:14:23 :     1200 |     4.00 |   121.15 |     0.00 |     0.00 |     0.00 |    60.70 |     3.16 |    -0.07 |
+OPTI 18:20:02 :     1250 |     3.91 |   121.01 |     0.00 |     0.00 |     0.00 |    61.12 |     3.05 |    -0.07 |
+OPTI 18:25:39 :     1300 |     3.83 |   120.99 |     0.00 |     0.00 |     0.00 |    61.12 |     2.95 |    -0.07 |
+OPTI 18:31:16 :     1350 |     3.76 |   120.93 |     0.00 |     0.00 |     0.00 |    61.62 |     2.90 |    -0.07 |
+OPTI 18:36:54 :     1400 |     3.70 |   120.85 |     0.00 |     0.00 |     0.00 |    61.86 |     2.81 |    -0.07 |
+OPTI 18:42:41 :     1450 |     3.64 |   120.77 |     0.00 |     0.00 |     0.00 |    62.31 |     2.72 |    -0.07 |
+OPTI 18:48:26 :     1500 |     3.61 |   120.58 |     0.00 |     0.00 |     0.00 |    63.46 |     2.65 |    -0.07 |
+OPTI 18:54:09 :     1550 |     3.57 |   120.42 |     0.00 |     0.00 |     0.00 |    62.82 |     2.66 |    -0.07 |
+OPTI 18:59:54 :     1600 |     3.54 |   120.28 |     0.00 |     0.00 |     0.00 |    63.46 |     2.68 |    -0.07 |
+OPTI 19:05:26 :     1650 |     3.52 |   120.23 |     0.00 |     0.00 |     0.00 |    63.99 |     2.72 |    -0.07 |
+OPTI 19:10:59 :     1700 |     3.50 |   120.17 |     0.00 |     0.00 |     0.00 |    64.37 |     2.74 |    -0.07 |
+OPTI 19:16:31 :     1750 |     3.50 |   120.17 |     0.00 |     0.00 |     0.00 |    64.78 |     2.75 |    -0.07 |
+OPTI 19:22:08 :     1800 |     3.49 |   120.20 |     0.00 |     0.00 |     0.00 |    65.21 |     2.76 |    -0.07 |
+OPTI 19:27:48 :     1850 |     3.48 |   120.21 |     0.00 |     0.00 |     0.00 |    65.26 |     2.77 |    -0.07 |
+OPTI 19:33:29 :     1900 |     3.46 |   120.23 |     0.00 |     0.00 |     0.00 |    64.92 |     2.76 |    -0.07 |
+OPTI 19:39:09 :     1950 |     3.44 |   120.30 |     0.00 |     0.00 |     0.00 |    64.92 |     2.76 |    -0.07 |
+IGM %s :         Iterations   |         Time (y)     |     Time Step (y)   |   Ice Volume (km^3) 
+Computational statistics report:
+                      iceflow  |  mean time per it :      nan  |  total :   0.0000  |  number it  :        0
+                     optimize  |  mean time per it :   6.7461  |  total : 13492.2529  |  number it  :     2000
+                    time_step  |  mean time per it :      nan  |  total :   0.0000  |  number it  :        0
+                          thk  |  mean time per it :      nan  |  total :   0.0000  |  number it  :        0
+             vertical_iceflow  |  mean time per it :      nan  |  total :   0.0000  |  number it  :        0
