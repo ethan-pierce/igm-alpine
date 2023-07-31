@@ -59,7 +59,6 @@ params.init_slidingco             = 10000    # initial value for the sliding coe
 
 # Define a state class/dictionnary that contains all the data
 state = igm.State()
-igm.init_state(params, state)
 
 # Place the computation on your device GPU ('/GPU:0') or CPU ('/CPU:0')
 with tf.device("/GPU:0"):
