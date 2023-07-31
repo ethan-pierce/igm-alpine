@@ -44,7 +44,7 @@ params.observation = True
 
 ################################################# ETHAN'S PLAYGROUND :-) #################################################
 
-params.opti_control = ["thk", "usurf", "slidingco"]   # here you may add "usurf" and "slidingco"
+params.opti_control = ["thk", "slidingco"]   # here you may add "usurf" and "slidingco"
 params.opti_cost    = ["velsurf", "thk", "icemask"] # here you may add  "usurf" "thk" "divfluxfcz"
 params.opti_regu_param_thk        = 10       # control the strength of the regularization for the bedrock
 params.opti_step_size             = 1        # control the step size of the optimization
