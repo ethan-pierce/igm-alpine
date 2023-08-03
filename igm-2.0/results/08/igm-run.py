@@ -37,17 +37,17 @@ params = parser.parse_args()
 # params.RGI = 'RGI60-11.01450' # necessary when using prepare_data module
 params.tstart = 2000.0
 params.tend   = 2000.0
-params.opti_nbitmax = 2000
+params.opti_nbitmax = 1000
 params.tsave  = 50
 params.plot_live = False
 params.observation = True
 ################################################# ETHAN'S PLAYGROUND :-) #################################################
 
-params.opti_control = ["thk", "slidingco"]   # here you may add "usurf" and "slidingco"
+params.opti_control = ["slidingco"]   # here you may add "usurf" and "slidingco"
 params.opti_cost    = ["velsurf", "icemask"] # here you may add  "usurf" "thk" "divfluxfcz"
 params.opti_regu_param_thk        = 1        # control the strength of the regularization for the bedrock
 params.opti_regu_param_slidingco  = 1        # weight for the regul. of slidingco (if selected in controls)
-params.opti_step_size             = 0.001        # control the step size of the optimization
+params.opti_step_size             = 0.01        # control the step size of the optimization
 params.opti_convexity_weight      = 0        # weight for the convexity term (zero is fine here)
 params.opti_velobs_std            = 10.0     # standard deviation of the velocity observations
 params.opti_usurfobs_std          = 2.0     # standard deviation of the surface elevation (if selected in controls)
