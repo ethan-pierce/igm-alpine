@@ -54,6 +54,7 @@ params.opti_velobs_std            = 1.0      # standard deviation of the velocit
 params.opti_usurfobs_std          = 2.0      # standard deviation of the surface elevation (if selected in controls)
 params.opti_thkobs_std            = 3.0      # standard deviation of the ice thickness (if selected in controls)
 params.init_slidingco             = 10000    # initial value for the sliding coefficient
+params.opti_output_freq           = 1
 
 ########################################################################################################################
 
