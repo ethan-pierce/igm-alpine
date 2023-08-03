@@ -45,8 +45,8 @@ params.observation = True
 
 params.opti_control = ["slidingco"]   # here you may add "usurf" and "slidingco"
 params.opti_cost    = ["velsurf", "icemask"] # here you may add  "usurf" "thk" "divfluxfcz"
-params.opti_regu_param_thk        = 1        # control the strength of the regularization for the bedrock
-params.opti_regu_param_slidingco  = 1        # weight for the regul. of slidingco (if selected in controls)
+params.opti_regu_param_thk        = 10        # control the strength of the regularization for the bedrock
+params.opti_regu_param_slidingco  = 10        # weight for the regul. of slidingco (if selected in controls)
 params.opti_step_size             = 0.01        # control the step size of the optimization
 params.opti_convexity_weight      = 0        # weight for the convexity term (zero is fine here)
 params.opti_velobs_std            = 10.0     # standard deviation of the velocity observations
