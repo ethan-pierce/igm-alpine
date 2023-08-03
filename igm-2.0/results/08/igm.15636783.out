@@ -1,0 +1,43 @@
+2023-08-03 10:37:45.151509: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2023-08-03 10:37:45.151693: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-08-03 10:38:41.507749: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2023-08-03 10:38:41.507984: W tensorflow/stream_executor/cuda/cuda_driver.cc:269] failed call to cuInit: UNKNOWN ERROR (303)
+2023-08-03 10:38:41.508037: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (bnode0503.rc.int.colorado.edu): /proc/driver/nvidia/version does not exist
+2023-08-03 10:38:41.508384: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+/projects/etpi5866/igm2/igm/modules/preproc/optimize.py:736: RuntimeWarning: invalid value encountered in divide
+  costs[:, i] /= np.max(costs[:, i])
+WARNING:tensorflow:No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+/projects/etpi5866/software/anaconda/envs/igm2/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3504: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/projects/etpi5866/software/anaconda/envs/igm2/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+                   Step  |  ICE_VOL |  COST_U  |  COST_H  |  COST_D  |  COST_S  |   REGU_H |   REGU_S | COST_GLEN  
+OPTI 10:38:53 :        0 |    24.83 |   9606.95 |     0.00 |     0.00 |     0.00 |     0.00 |     0.00 |     2.41 |
+OPTI 10:44:25 :       50 |    24.83 |   5272.46 |     0.00 |     0.00 |     0.00 |     0.00 |     0.01 |   -40.55 |
+OPTI 10:49:58 :      100 |    24.83 |   7558.61 |     0.00 |     0.00 |     0.00 |     0.00 |     0.04 |   -46.43 |
+OPTI 10:55:31 :      150 |    24.83 |   9307.88 |     0.00 |     0.00 |     0.00 |     0.00 |     0.10 |   -49.97 |
+OPTI 11:00:58 :      200 |    24.83 |   10717.66 |     0.00 |     0.00 |     0.00 |     0.00 |     0.19 |   -52.52 |
+OPTI 11:06:26 :      250 |    24.83 |   11953.73 |     0.00 |     0.00 |     0.00 |     0.00 |     0.31 |   -54.62 |
+OPTI 11:11:54 :      300 |    24.83 |   13016.98 |     0.00 |     0.00 |     0.00 |     0.00 |     0.47 |   -56.33 |
+OPTI 11:17:23 :      350 |    24.83 |   13968.72 |     0.00 |     0.00 |     0.00 |     0.00 |     0.66 |   -57.74 |
+OPTI 11:22:55 :      400 |    24.83 |   14850.27 |     0.00 |     0.00 |     0.00 |     0.00 |     0.89 |   -58.94 |
+OPTI 11:28:25 :      450 |    24.83 |   15649.54 |     0.00 |     0.00 |     0.00 |     0.00 |     1.16 |   -60.01 |
+OPTI 11:33:54 :      500 |    24.83 |   16411.59 |     0.00 |     0.00 |     0.00 |     0.00 |     1.46 |   -60.99 |
+OPTI 11:39:20 :      550 |    24.83 |   17109.65 |     0.00 |     0.00 |     0.00 |     0.00 |     1.81 |   -61.86 |
+OPTI 11:44:49 :      600 |    24.83 |   17745.61 |     0.00 |     0.00 |     0.00 |     0.00 |     2.19 |   -62.67 |
+OPTI 11:50:15 :      650 |    24.83 |   18383.96 |     0.00 |     0.00 |     0.00 |     0.00 |     2.62 |   -63.46 |
+OPTI 11:55:43 :      700 |    24.83 |   18985.94 |     0.00 |     0.00 |     0.00 |     0.00 |     3.09 |   -64.23 |
+OPTI 12:01:14 :      750 |    24.83 |   19593.65 |     0.00 |     0.00 |     0.00 |     0.00 |     3.59 |   -64.96 |
+OPTI 12:06:43 :      800 |    24.83 |   20156.38 |     0.00 |     0.00 |     0.00 |     0.00 |     4.14 |   -65.65 |
+OPTI 12:12:15 :      850 |    24.83 |   20692.37 |     0.00 |     0.00 |     0.00 |     0.00 |     4.72 |   -66.31 |
+OPTI 12:17:39 :      900 |    24.83 |   21212.27 |     0.00 |     0.00 |     0.00 |     0.00 |     5.33 |   -66.94 |
+OPTI 12:23:01 :      950 |    24.83 |   21699.15 |     0.00 |     0.00 |     0.00 |     0.00 |     5.98 |   -67.54 |
+IGM %s :         Iterations   |         Time (y)     |     Time Step (y)   |   Ice Volume (km^3) 
+Computational statistics report:
+                      iceflow  |  mean time per it :      nan  |  total :   0.0000  |  number it  :        0
+                     optimize  |  mean time per it :   6.5701  |  total : 6570.1380  |  number it  :     1000
+                    time_step  |  mean time per it :      nan  |  total :   0.0000  |  number it  :        0
+                          thk  |  mean time per it :      nan  |  total :   0.0000  |  number it  :        0
+             vertical_iceflow  |  mean time per it :      nan  |  total :   0.0000  |  number it  :        0
