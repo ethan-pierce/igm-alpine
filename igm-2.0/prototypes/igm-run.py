@@ -7,7 +7,7 @@ import tensorflow as tf
 import igm
 
 from mysmb import *
- 
+
 # Select one OPTION btw the first, keep the MANDATORY ones, un/comment OPTIONAL modules
 modules = [
 #           "prepare_data",       # OPTION 1  : download and prepare the data with OGGM
@@ -35,7 +35,7 @@ params = parser.parse_args()
 # params.RGI = 'RGI60-11.01450' # necessary when using prepare_data module
 params.tstart = 2000.0
 params.tend   = 2100.0
-params.opti_nbitmax = 1000
+params.opti_nbitmax = 100
 params.tsave  = 5
 params.plot_live = False
 params.observation = True
@@ -44,23 +44,22 @@ params.plot2d_live_inversion = False
 
 ################################################# ETHAN'S PLAYGROUND :-) #################################################
 
-params.opti_control = ["thk"]                # here you may add "usurf" and "slidingco"
-params.opti_cost    = ["velsurf", "icemask"] # here you may add  "usurf" "thk" "divfluxfcz"
-params.opti_regu_param_thk        = 10       # control the strength of the regularization for the bedrock
-params.opti_step_size             = 1        # control the step size of the optimization
-params.opti_regu_param_slidingco  = 10       # weight for the regul. of slidingco (if selected in controls)
-params.opti_convexity_weight      = 0        # weight for the convexity term (zero is fine here)
-params.opti_velobs_std            = 1.0      # standard deviation of the velocity observations
-params.opti_usurfobs_std          = 2.0      # standard deviation of the surface elevation (if selected in controls)
-params.opti_thkobs_std            = 3.0      # standard deviation of the ice thickness (if selected in controls)
-params.init_slidingco             = 10000    # initial value for the sliding coefficient
-params.opti_output_freq           = 1
+params.opti_control = ["thk", "slidingco"]           # here you may add "usurf" and "slidingco"
+params.opti_cost    = ["velsurf", "thk", "icemask"]  # here you may add  "usurf" "thk" "divfluxfcz"
+params.opti_regu_param_thk        = 1                # control the strength of the regularization for the bedrock
+params.opti_step_size             = 0.0003           # control the step size of the optimization
+params.opti_regu_param_slidingco  = 1                # weight for the regul. of slidingco (if selected in controls)
+params.opti_convexity_weight      = 0                # weight for the convexity term (zero is fine here)
+params.opti_velsurfobs_std        = 5.0              # standard deviation of the velocity observations
+params.opti_usurfobs_std          = 2.0              # standard deviation of the surface elevation (if selected in controls)
+params.opti_thkobs_std            = 25.0             # standard deviation of the ice thickness (if selected in controls)
+params.init_slidingco             = 100000           # initial value for the sliding coefficient
+params.opti_output_freq           = 1                # how often to print diagnostics
 
 ########################################################################################################################
 
 # Define a state class/dictionnary that contains all the data
 state = igm.State()
-iterations = 0
 
 # Place the computation on your device GPU ('/GPU:0') or CPU ('/CPU:0')
 with tf.device("/GPU:0"):
@@ -69,10 +68,15 @@ with tf.device("/GPU:0"):
     for module in modules:
         getattr(igm, "init_" + module)(params, state)
 
+    Ub = state.uvelbase
+    Vb = state.vvelbase
+
+    np.savetxt('sliding_velocity_x.txt', Ub)
+    np.savetxt('sliding_velocity_y.txt', Vb)
+    np.savetxt('sliding_velocity_mag.txt', np.sqrt(Ub**2 + Vb**2))
+
     # Time loop, perform the simulation until reaching the defined end time
     while state.t < params.tend:
-        iterations += 1
-        print('Iteration #' + str(iterations))
         
         # Update each model components in turn
         for module in modules:
@@ -81,3 +85,4 @@ with tf.device("/GPU:0"):
     # Finalize each module in turn
     for module in modules:
         getattr(igm, "final_" + module)(params, state)
+
