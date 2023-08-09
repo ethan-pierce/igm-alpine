@@ -8,8 +8,6 @@ import igm
 
 from mysmb import *
 
-plt.rcParams.update({'backend': 'TkAgg'})
-
 # Select one OPTION btw the first, keep the MANDATORY ones, un/comment OPTIONAL modules
 modules = [
 #           "prepare_data",       # OPTION 1  : download and prepare the data with OGGM
