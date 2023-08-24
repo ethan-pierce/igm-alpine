@@ -45,9 +45,9 @@ params.plot2d_live_inversion = False
 ################################################# ETHAN'S PLAYGROUND :-) #################################################
 
 params.opti_control                = ["thk", "usurf", "slidingco"]    # here you may add "usurf" and "slidingco"
-params.opti_cost                   = ["velsurf", "usurf", "icemask"]  # here you may add  "usurf" "thk" "divfluxfcz"
+params.opti_cost                   = ["thk", "usurf", "velsurf", "icemask"]  # here you may add  "usurf" "thk" "divfluxfcz"
 params.opti_regu_param_thk         = 10                               # control the strength of the regularization for the bedrock
-params.opti_step_size              = 0.00005                          # control the step size of the optimization
+params.opti_step_size              = 1                                # control the step size of the optimization
 params.retrain_iceflow_emulator_lr = 0.00002                          # learning rate for the iceflow emulator
 params.exp_weertman                = 7                                # exponent in Weertman-style sliding law
 params.opti_regu_param_slidingco   = 10                               # weight for the regul. of slidingco (if selected in controls)
