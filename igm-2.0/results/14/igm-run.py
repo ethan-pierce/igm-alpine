@@ -15,7 +15,7 @@ modules = [
 #           "load_tif_data",      # OPTION 3  : read 2d data from tif files
 #           "make_synthetic",     # OPTION 4  : make a synthetic glacier with ideal geom.
            "optimize",            # OPTIONAL  : optimize unobservable variables from obs.
-#           "mysmb",               # OPTIONAL  : custom surface mass balance model
+        #   "mysmb",               # OPTIONAL  : custom surface mass balance model
            "flow_dt_thk",         # MANDATORY : does update iceflow, time step and thickness
 #           "vertical_iceflow",    # OPTIONAL  : computes vertical velocity
           "write_ncdf_ex",       # OPTIONAL  : write 2d state data to netcdf files
@@ -47,7 +47,7 @@ params.plot2d_live_inversion = False
 params.opti_control                = ["thk", "usurf", "slidingco"]    # here you may add "usurf" and "slidingco"
 params.opti_cost                   = ["thk", "usurf", "velsurf", "icemask"]  # here you may add  "usurf" "thk" "divfluxfcz"
 params.opti_regu_param_thk         = 10                               # control the strength of the regularization for the bedrock
-params.opti_step_size              = 1                                # control the step size of the optimization
+params.opti_step_size              = 0.001                            # control the step size of the optimization
 params.retrain_iceflow_emulator_lr = 0.00002                          # learning rate for the iceflow emulator
 params.exp_weertman                = 7                                # exponent in Weertman-style sliding law
 params.opti_regu_param_slidingco   = 10                               # weight for the regul. of slidingco (if selected in controls)
