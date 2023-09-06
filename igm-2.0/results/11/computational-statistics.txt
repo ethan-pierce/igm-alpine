@@ -1,4 +1,0 @@
-                      iceflow  |  mean time per it :   1.0714  |  total : 581.7818  |  number it :      543
-                     optimize  |  mean time per it :   6.4444  |  total : 3222.2203  |  number it :      500
-                    time_step  |  mean time per it :   0.0013  |  total :   0.7019  |  number it :      543
-                          thk  |  mean time per it :   0.0031  |  total :   1.6649  |  number it :      543

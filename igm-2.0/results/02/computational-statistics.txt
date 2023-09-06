@@ -1,5 +1,0 @@
-                      iceflow  |  mean time per it :      nan  |  total :   0.0000  |  number it :        0
-                     optimize  |  mean time per it :   7.0996  |  total : 7099.6462  |  number it :     1000
-                    time_step  |  mean time per it :      nan  |  total :   0.0000  |  number it :        0
-                          thk  |  mean time per it :      nan  |  total :   0.0000  |  number it :        0
-             vertical_iceflow  |  mean time per it :      nan  |  total :   0.0000  |  number it :        0
