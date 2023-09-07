@@ -1,0 +1,70 @@
+2023-08-24 14:23:04.332027: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2023-08-24 14:23:04.332065: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-08-24 14:23:17.666465: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2023-08-24 14:23:17.666498: W tensorflow/stream_executor/cuda/cuda_driver.cc:269] failed call to cuInit: UNKNOWN ERROR (303)
+2023-08-24 14:23:17.666522: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (bnode0316.rc.int.colorado.edu): /proc/driver/nvidia/version does not exist
+2023-08-24 14:23:17.666978: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+/projects/etpi5866/igm2/igm/modules/preproc/optimize.py:736: RuntimeWarning: invalid value encountered in divide
+  costs[:, i] /= np.max(costs[:, i])
+WARNING:tensorflow:No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+                   Step  |  ICE_VOL |  COST_U  |  COST_H  |  COST_D  |  COST_S  |   REGU_H |   REGU_S | COST_GLEN  
+OPTI 14:23:30 :        0 |    22.74 |   6444.71 |     0.00 |     0.00 |     0.00 |   346.92 |     0.00 |    21.86 |
+OPTI 14:24:35 :       10 |    22.74 |   744.42 |     0.00 |     0.00 |     0.00 |   320.30 |     0.00 |     0.81 |
+OPTI 14:25:39 :       20 |    22.74 |   514.60 |     0.00 |     0.00 |     0.00 |   300.88 |     0.00 |    -0.10 |
+OPTI 14:26:41 :       30 |    22.74 |   496.80 |     0.00 |     0.00 |     0.00 |   293.60 |     0.00 |    -0.23 |
+OPTI 14:27:45 :       40 |    22.74 |   484.56 |     0.00 |     0.00 |     0.00 |   291.11 |     0.00 |    -0.27 |
+OPTI 14:28:49 :       50 |    22.74 |   492.17 |     0.00 |     0.00 |     0.00 |   289.23 |     0.00 |    -0.30 |
+OPTI 14:29:51 :       60 |    22.74 |   492.86 |     0.00 |     0.00 |     0.00 |   288.43 |     0.00 |    -0.32 |
+OPTI 14:30:53 :       70 |    22.74 |   496.26 |     0.00 |     0.00 |     0.00 |   287.91 |     0.00 |    -0.34 |
+OPTI 14:31:55 :       80 |    22.74 |   498.97 |     0.00 |     0.00 |     0.00 |   287.13 |     0.00 |    -0.35 |
+OPTI 14:33:00 :       90 |    22.74 |   502.60 |     0.00 |     0.00 |     0.00 |   285.66 |     0.00 |    -0.36 |
+OPTI 14:34:03 :      100 |    22.74 |   505.13 |     0.00 |     0.00 |     0.00 |   284.52 |     0.00 |    -0.37 |
+OPTI 14:35:06 :      110 |    22.74 |   508.14 |     0.00 |     0.00 |     0.00 |   283.63 |     0.00 |    -0.38 |
+OPTI 14:36:10 :      120 |    22.74 |   511.00 |     0.00 |     0.00 |     0.00 |   282.90 |     0.00 |    -0.39 |
+OPTI 14:37:13 :      130 |    22.74 |   513.25 |     0.00 |     0.00 |     0.00 |   282.17 |     0.00 |    -0.39 |
+OPTI 14:38:17 :      140 |    22.74 |   515.26 |     0.00 |     0.00 |     0.00 |   281.37 |     0.00 |    -0.40 |
+OPTI 14:39:21 :      150 |    22.74 |   516.92 |     0.00 |     0.00 |     0.00 |   280.55 |     0.00 |    -0.40 |
+OPTI 14:40:26 :      160 |    22.74 |   518.22 |     0.00 |     0.00 |     0.00 |   279.74 |     0.00 |    -0.41 |
+OPTI 14:41:30 :      170 |    22.74 |   519.34 |     0.00 |     0.00 |     0.00 |   278.97 |     0.00 |    -0.41 |
+OPTI 14:42:31 :      180 |    22.74 |   520.35 |     0.00 |     0.00 |     0.00 |   278.27 |     0.00 |    -0.41 |
+OPTI 14:43:34 :      190 |    22.74 |   521.26 |     0.00 |     0.00 |     0.00 |   277.67 |     0.00 |    -0.42 |
+OPTI 14:44:39 :      200 |    22.74 |   522.16 |     0.00 |     0.00 |     0.00 |   276.99 |     0.00 |    -0.42 |
+OPTI 14:45:40 :      210 |    22.74 |   523.21 |     0.00 |     0.00 |     0.00 |   276.38 |     0.00 |    -0.42 |
+OPTI 14:46:43 :      220 |    22.74 |   524.15 |     0.00 |     0.00 |     0.00 |   275.80 |     0.00 |    -0.43 |
+OPTI 14:47:45 :      230 |    22.74 |   524.88 |     0.00 |     0.00 |     0.00 |   275.31 |     0.00 |    -0.43 |
+OPTI 14:48:49 :      240 |    22.74 |   525.56 |     0.00 |     0.00 |     0.00 |   274.89 |     0.00 |    -0.43 |
+OPTI 14:49:51 :      250 |    22.74 |   526.33 |     0.00 |     0.00 |     0.00 |   274.46 |     0.00 |    -0.44 |
+OPTI 14:50:53 :      260 |    22.74 |   527.16 |     0.00 |     0.00 |     0.00 |   274.16 |     0.00 |    -0.44 |
+OPTI 14:51:55 :      270 |    22.74 |   528.13 |     0.00 |     0.00 |     0.00 |   273.82 |     0.00 |    -0.44 |
+OPTI 14:52:58 :      280 |    22.73 |   529.36 |     0.00 |     0.00 |     0.00 |   273.53 |     0.00 |    -0.45 |
+OPTI 14:54:00 :      290 |    22.73 |   530.54 |     0.00 |     0.00 |     0.00 |   273.23 |     0.00 |    -0.45 |
+OPTI 14:55:05 :      300 |    22.73 |   531.80 |     0.00 |     0.00 |     0.00 |   272.92 |     0.00 |    -0.45 |
+OPTI 14:56:09 :      310 |    22.73 |   532.97 |     0.00 |     0.00 |     0.00 |   272.65 |     0.00 |    -0.45 |
+OPTI 14:57:14 :      320 |    22.73 |   534.20 |     0.00 |     0.00 |     0.00 |   272.38 |     0.00 |    -0.46 |
+OPTI 14:58:18 :      330 |    22.73 |   535.35 |     0.00 |     0.00 |     0.00 |   272.16 |     0.00 |    -0.46 |
+OPTI 14:59:21 :      340 |    22.73 |   536.48 |     0.00 |     0.00 |     0.00 |   271.95 |     0.01 |    -0.46 |
+OPTI 15:00:23 :      350 |    22.73 |   537.45 |     0.00 |     0.00 |     0.00 |   271.76 |     0.01 |    -0.46 |
+OPTI 15:01:27 :      360 |    22.73 |   538.46 |     0.00 |     0.00 |     0.00 |   271.55 |     0.01 |    -0.46 |
+OPTI 15:02:31 :      370 |    22.73 |   539.33 |     0.00 |     0.00 |     0.00 |   271.32 |     0.01 |    -0.47 |
+OPTI 15:03:34 :      380 |    22.73 |   540.33 |     0.00 |     0.00 |     0.00 |   271.10 |     0.01 |    -0.47 |
+OPTI 15:04:37 :      390 |    22.73 |   541.38 |     0.00 |     0.00 |     0.00 |   270.96 |     0.01 |    -0.47 |
+OPTI 15:05:41 :      400 |    22.73 |   542.34 |     0.00 |     0.00 |     0.00 |   270.84 |     0.01 |    -0.47 |
+OPTI 15:06:44 :      410 |    22.73 |   543.23 |     0.00 |     0.00 |     0.00 |   270.73 |     0.01 |    -0.47 |
+OPTI 15:07:48 :      420 |    22.73 |   544.16 |     0.00 |     0.00 |     0.00 |   270.63 |     0.01 |    -0.48 |
+OPTI 15:08:52 :      430 |    22.73 |   545.05 |     0.00 |     0.00 |     0.00 |   270.57 |     0.01 |    -0.48 |
+OPTI 15:09:53 :      440 |    22.73 |   546.15 |     0.00 |     0.00 |     0.00 |   270.51 |     0.01 |    -0.48 |
+OPTI 15:10:55 :      450 |    22.73 |   547.03 |     0.00 |     0.00 |     0.00 |   270.52 |     0.01 |    -0.48 |
+OPTI 15:11:56 :      460 |    22.73 |   548.03 |     0.00 |     0.00 |     0.00 |   270.49 |     0.01 |    -0.48 |
+OPTI 15:12:57 :      470 |    22.73 |   548.82 |     0.00 |     0.00 |     0.00 |   270.47 |     0.01 |    -0.48 |
+OPTI 15:13:59 :      480 |    22.73 |   549.55 |     0.00 |     0.00 |     0.00 |   270.48 |     0.01 |    -0.49 |
+OPTI 15:15:01 :      490 |    22.73 |   550.29 |     0.00 |     0.00 |     0.00 |   270.52 |     0.01 |    -0.49 |
+IGM %s :         Iterations   |         Time (y)     |     Time Step (y)   |   Ice Volume (km^3) 
+IGM 15:16:28 :          30    |          2001        |        0.05        |          22.73 
+Computational statistics report:
+                      iceflow  |  mean time per it :   0.9679  |  total :  29.0364  |  number it  :       30
+                     optimize  |  mean time per it :   6.3091  |  total : 3154.5648  |  number it  :      500
+                    time_step  |  mean time per it :   0.0012  |  total :   0.0355  |  number it  :       30
+                          thk  |  mean time per it :   0.0028  |  total :   0.0832  |  number it  :       30
+                write_ncdf_ex  |  mean time per it :   0.0392  |  total :   0.0392  |  number it  :        1

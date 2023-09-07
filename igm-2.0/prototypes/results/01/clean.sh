@@ -1,0 +1,10 @@
+rm clean.sh
+rm igm.log
+rm igm-run-parameters.txt
+rm optimize.nc
+rm geology-optimized.nc
+rm convergence.png
+rm rms_std.dat
+rm costs.dat
+rm computational-statistics.txt
+rm computational-pie.png
