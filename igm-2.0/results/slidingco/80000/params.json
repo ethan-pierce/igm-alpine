@@ -12,7 +12,7 @@
   "RGI_ID": "RGI60-01.00709",
   "preprocess": false,
   "time_start": 2000.0,
-  "time_end": 2100.0,
+  "time_end": 2001.0,
   "time_save": 5.0,
   "plot_live": false,
   "opti_nbitmax": 500,
@@ -25,7 +25,6 @@
   "opti_velobs_std": 1.0,
   "opti_usurfobs_std": 2.0,
   "opti_thkobs_std": 10.0,
-  "opti_smooth_anisotropy_factor": 0.8,
-  "init_slidingco": 40000,
+  "init_slidingco": 80000,
   "vars_to_save_ncdf_ex" : ["topg", "usurf", "thk", "smb", "velsurf_mag", "velbase_mag", "uvelbase", "vvelbase"]
 }

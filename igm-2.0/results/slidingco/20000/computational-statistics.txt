@@ -1,0 +1,6 @@
+                      iceflow  |  mean time per it :   0.9800  |  total :   4.8998  |  number it :        5
+                     optimize  |  mean time per it :   3.1380  |  total : 1569.0228  |  number it :      500
+                   smb_simple  |  mean time per it :   0.3160  |  total :   0.3160  |  number it :        1
+                    time_step  |  mean time per it :   0.0020  |  total :   0.0099  |  number it :        5
+                          thk  |  mean time per it :   0.0024  |  total :   0.0121  |  number it :        5
+                write_ncdf_ex  |  mean time per it :   0.0189  |  total :   0.0189  |  number it :        1
