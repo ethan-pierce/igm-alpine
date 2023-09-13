@@ -1,0 +1,30 @@
+{
+   "modules_preproc": ["load_ncdf_data","optimize"],
+   "modules_process": ["smb_simple","flow_dt_thk"],
+  "modules_postproc": ["write_ncdf_ex", "print_info", "print_all_comp_info"],
+"smb_simple_array": [ 
+  ["time", "gradabl", "gradacc", "ela", "accmax"],
+  [ 1900,      0.009,     0.005,  800,      2.0],
+  [ 2000,      0.009,     0.005,  900,      2.0],
+  [ 2100,      0.009,     0.005,  900,      2.0]
+],
+  "input_file": "input_saved.nc",
+  "RGI_ID": "RGI60-01.00709",
+  "preprocess": false,
+  "time_start": 2000.0,
+  "time_end": 2100.0,
+  "time_save": 5.0,
+  "plot_live": false,
+  "opti_nbitmax": 500,
+  "opti_control": ["thk","usurf"],
+  "opti_cost": ["velsurf","icemask","usurf"],
+  "opti_convexity_weight": 0,
+  "opti_regu_param_thk": 0.1,
+  "opti_step_size": 1,
+  "opti_regu_param_slidingco": 10,
+  "opti_velobs_std": 1.0,
+  "opti_usurfobs_std": 2.0,
+  "opti_thkobs_std": 10.0,
+  "init_slidingco": 40000,
+  "vars_to_save_ncdf_ex" : ["topg", "usurf", "thk", "smb", "velsurf_mag", "velbase_mag", "uvelbase", "vvelbase"]
+}
