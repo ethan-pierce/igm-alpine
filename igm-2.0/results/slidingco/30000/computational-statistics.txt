@@ -1,6 +1,6 @@
-                      iceflow  |  mean time per it :   0.3651  |  total : 184.0115  |  number it :      504
-                     optimize  |  mean time per it :   3.1892  |  total : 1594.5978  |  number it :      500
-                   smb_simple  |  mean time per it :   0.0094  |  total :   0.8474  |  number it :       90
-                    time_step  |  mean time per it :   0.0018  |  total :   0.8975  |  number it :      504
-                          thk  |  mean time per it :   0.0024  |  total :   1.2023  |  number it :      504
-                write_ncdf_ex  |  mean time per it :   0.0158  |  total :   0.3170  |  number it :       20
+                      iceflow  |  mean time per it :   0.9354  |  total :   5.6126  |  number it :        6
+                     optimize  |  mean time per it :   3.1612  |  total : 1580.6210  |  number it :      500
+                   smb_simple  |  mean time per it :   0.3348  |  total :   0.3348  |  number it :        1
+                    time_step  |  mean time per it :   0.0033  |  total :   0.0197  |  number it :        6
+                          thk  |  mean time per it :   0.0025  |  total :   0.0148  |  number it :        6
+                write_ncdf_ex  |  mean time per it :   0.0190  |  total :   0.0190  |  number it :        1
