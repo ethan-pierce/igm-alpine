@@ -1,7 +1,7 @@
-                      iceflow  |  mean time per it :   0.7691  |  total :   5.3835  |  number it :        7
-                     optimize  |  mean time per it :   3.4069  |  total : 1703.4460  |  number it :      500
-                   smb_simple  |  mean time per it :   0.4375  |  total :   0.4375  |  number it :        1
-                    time_step  |  mean time per it :   0.0033  |  total :   0.0230  |  number it :        7
-                          thk  |  mean time per it :   0.0025  |  total :   0.0172  |  number it :        7
-                write_ncdf_ex  |  mean time per it :   0.0195  |  total :   0.0195  |  number it :        1
-                 write_plot2d  |  mean time per it :   0.4641  |  total :   0.4641  |  number it :        1
+                      iceflow  |  mean time per it :   1.2651  |  total :   6.3257  |  number it :        5
+                     optimize  |  mean time per it :   3.2340  |  total : 1617.0039  |  number it :      500
+                   smb_simple  |  mean time per it :   0.4525  |  total :   0.4525  |  number it :        1
+                    time_step  |  mean time per it :   0.0023  |  total :   0.0113  |  number it :        5
+                          thk  |  mean time per it :   0.0028  |  total :   0.0141  |  number it :        5
+                write_ncdf_ex  |  mean time per it :   0.0190  |  total :   0.0190  |  number it :        1
+                 write_plot2d  |  mean time per it :   0.5270  |  total :   0.5270  |  number it :        1

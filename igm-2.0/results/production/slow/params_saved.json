@@ -35,9 +35,9 @@
     "icemask"
   ],
   "opti_init_zero_thk": false,
-  "opti_regu_param_thk": 0.1,
+  "opti_regu_param_thk": 0.6,
   "opti_regu_param_slidingco": 10,
-  "opti_smooth_anisotropy_factor": 0.05,
+  "opti_smooth_anisotropy_factor": 0.1,
   "opti_convexity_weight": 0,
   "opti_usurfobs_std": 2.0,
   "opti_velsurfobs_std": 2.0,
