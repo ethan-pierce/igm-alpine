@@ -1,0 +1,5 @@
+1. Increase thickness regularization within [0.1, 1.0].
+2. Check the histogram of surface velocity misfit for points where Us > median
+3. Check the percent area where Ub > Ubar
+4. Plot the histograms of effective pressure and sliding velocity
+5. Plot maps of Iverson entrainment depth and basal melt rate
