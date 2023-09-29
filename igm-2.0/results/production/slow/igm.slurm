@@ -1,12 +1,11 @@
 #!/bin/bash
 
 #SBATCH --qos=blanca-csdms
-#SBATCH --job-name=igm
-#SBATCH --output=igm.%j.out
+#SBATCH --job-name=igm-slow
+#SBATCH --output=igm-slow.%j.out
 #SBATCH --time=03:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --gres=gpu
 
 module purge
 module load anaconda

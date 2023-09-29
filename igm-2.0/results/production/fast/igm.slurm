@@ -6,7 +6,6 @@
 #SBATCH --time=03:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --gres=gpu
 
 module purge
 module load anaconda
