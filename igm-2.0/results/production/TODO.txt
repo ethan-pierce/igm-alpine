@@ -1,5 +1,6 @@
-1. Increase thickness regularization within [0.1, 1.0].
-2. Check the histogram of surface velocity misfit for points where Us > median
-3. Check the percent area where Ub > Ubar
-4. Plot the histograms of effective pressure and sliding velocity
-5. Plot maps of Iverson entrainment depth and basal melt rate
+1. Fast case needs slower vel. in lower main stem by about 50%
+2. Slow case needs ~100 m less ice thickness
+2. Why is sliding velocity ever > surface velocity?
+3. Use STD(residual) and plan-view residual plots to verify.
+4. Ice thickness --> effective pressure
+5. Sliding velocity --> basal melt rate
