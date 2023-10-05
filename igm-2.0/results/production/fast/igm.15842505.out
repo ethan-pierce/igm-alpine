@@ -1,0 +1,41 @@
+2023-10-05 09:25:25.633528: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2023-10-05 09:25:25.683230: E tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:9342] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2023-10-05 09:25:25.683254: E tensorflow/compiler/xla/stream_executor/cuda/cuda_fft.cc:609] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2023-10-05 09:25:25.683287: E tensorflow/compiler/xla/stream_executor/cuda/cuda_blas.cc:1518] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2023-10-05 09:25:25.692472: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2023-10-05 09:25:25.692725: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-10-05 09:25:33.493684: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/projects/etpi5866/igm/igm/modules/preproc/optimize.py:755: RuntimeWarning: invalid value encountered in divide
+  costs[:, i] /= np.max(costs[:, i])
+                   Step  |  ICE_VOL |  COST_U  |  COST_H  |  COST_D  |  COST_S  |   REGU_H |   REGU_S | COST_GLEN  
+OPTI 09:26:01 :        0 |    23.33 |   594.04 |     0.00 |     0.00 |     0.00 |    11.96 |     0.00 |     4.48 |
+OPTI 09:28:28 :       50 |    21.89 |    20.65 |     0.00 |     0.00 |     0.92 |    10.57 |     0.00 |    -0.41 |
+OPTI 09:30:55 :      100 |    20.71 |    12.15 |     0.00 |     0.00 |     1.90 |     9.90 |     0.00 |    -0.33 |
+OPTI 09:33:21 :      150 |    19.58 |     6.83 |     0.00 |     0.00 |     0.88 |     9.43 |     0.00 |    -0.28 |
+OPTI 09:35:49 :      200 |    18.80 |     4.54 |     0.00 |     0.00 |     0.50 |     9.15 |     0.00 |    -0.25 |
+OPTI 09:38:17 :      250 |    18.23 |     3.41 |     0.00 |     0.00 |     0.36 |     8.98 |     0.00 |    -0.24 |
+OPTI 09:40:44 :      300 |    17.77 |     2.83 |     0.00 |     0.00 |     0.28 |     8.84 |     0.00 |    -0.24 |
+OPTI 09:43:12 :      350 |    17.35 |     2.48 |     0.00 |     0.00 |     0.25 |     8.70 |     0.00 |    -0.23 |
+OPTI 09:45:39 :      400 |    16.98 |     2.24 |     0.00 |     0.00 |     0.23 |     8.54 |     0.00 |    -0.23 |
+OPTI 09:48:06 :      450 |    16.64 |     2.06 |     0.00 |     0.00 |     0.21 |     8.40 |     0.00 |    -0.23 |
+OPTI 09:50:32 :      500 |    16.33 |     1.94 |     0.00 |     0.00 |     0.20 |     8.25 |     0.00 |    -0.22 |
+OPTI 09:52:56 :      550 |    16.05 |     1.85 |     0.00 |     0.00 |     0.20 |     8.10 |     0.00 |    -0.22 |
+OPTI 09:55:20 :      600 |    15.80 |     1.78 |     0.00 |     0.00 |     0.19 |     7.95 |     0.00 |    -0.22 |
+OPTI 09:57:45 :      650 |    15.59 |     1.72 |     0.00 |     0.00 |     0.18 |     7.81 |     0.00 |    -0.22 |
+OPTI 10:00:10 :      700 |    15.40 |     1.69 |     0.00 |     0.00 |     0.17 |     7.65 |     0.00 |    -0.22 |
+OPTI 10:02:34 :      750 |    15.23 |     1.67 |     0.00 |     0.00 |     0.17 |     7.50 |     0.00 |    -0.21 |
+OPTI 10:04:57 :      800 |    15.08 |     1.65 |     0.00 |     0.00 |     0.17 |     7.36 |     0.00 |    -0.21 |
+OPTI 10:07:19 :      850 |    14.94 |     1.63 |     0.00 |     0.00 |     0.17 |     7.25 |     0.00 |    -0.21 |
+OPTI 10:09:42 :      900 |    14.81 |     1.61 |     0.00 |     0.00 |     0.16 |     7.14 |     0.00 |    -0.21 |
+OPTI 10:12:05 :      950 |    14.69 |     1.60 |     0.00 |     0.00 |     0.16 |     7.04 |     0.00 |    -0.21 |
+IGM %s :         Iterations   |         Time (y)     |     Time Step (y)   |   Ice Volume (km^3) 
+IGM 10:14:32 :           0    |          2000        |        0.11        |          14.58 
+IGM 10:14:36 :           7    |          2001        |        0.14        |          14.58 
+Computational statistics report:
+                      iceflow  |  mean time per it :   0.8940  |  total :   7.1522  |  number it  :        8
+                     optimize  |  mean time per it :   2.9078  |  total : 2907.7541  |  number it  :     1000
+                    time_step  |  mean time per it :   0.0019  |  total :   0.0152  |  number it  :        8
+                          thk  |  mean time per it :   0.0025  |  total :   0.0201  |  number it  :        8
+                write_ncdf_ex  |  mean time per it :   0.0278  |  total :   0.0557  |  number it  :        2
+                 write_plot2d  |  mean time per it :   0.3782  |  total :   0.7565  |  number it  :        2
