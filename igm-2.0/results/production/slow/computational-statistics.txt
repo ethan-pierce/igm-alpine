@@ -1,6 +1,0 @@
-                      iceflow  |  mean time per it :   2.8676  |  total :   5.7351  |  number it :        2
-                     optimize  |  mean time per it :   2.8893  |  total : 5778.5546  |  number it :     2000
-                    time_step  |  mean time per it :   0.0031  |  total :   0.0063  |  number it :        2
-                          thk  |  mean time per it :   0.0034  |  total :   0.0067  |  number it :        2
-                write_ncdf_ex  |  mean time per it :   0.0280  |  total :   0.0559  |  number it :        2
-                 write_plot2d  |  mean time per it :   0.3835  |  total :   0.7670  |  number it :        2
