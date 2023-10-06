@@ -1,0 +1,61 @@
+2023-10-06 09:25:19.132270: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2023-10-06 09:25:19.188208: E tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:9342] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2023-10-06 09:25:19.188237: E tensorflow/compiler/xla/stream_executor/cuda/cuda_fft.cc:609] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2023-10-06 09:25:19.188269: E tensorflow/compiler/xla/stream_executor/cuda/cuda_blas.cc:1518] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2023-10-06 09:25:19.198393: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2023-10-06 09:25:19.198618: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-10-06 09:25:20.422929: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/projects/etpi5866/igm/igm/modules/preproc/optimize.py:755: RuntimeWarning: invalid value encountered in divide
+  costs[:, i] /= np.max(costs[:, i])
+                   Step  |  ICE_VOL |  COST_U  |  COST_H  |  COST_D  |  COST_S  |   REGU_H |   REGU_S | COST_GLEN  
+OPTI 09:25:32 :        0 |    23.33 |    50.33 |     0.00 |     0.00 |     0.00 |    10.33 |     0.00 |    -0.33 |
+OPTI 09:28:00 :       50 |    21.70 |     9.29 |     0.00 |     0.00 |     0.99 |     8.21 |     0.00 |    -0.25 |
+OPTI 09:30:27 :      100 |    20.84 |     5.49 |     0.00 |     0.00 |     0.55 |     7.20 |     0.00 |    -0.24 |
+OPTI 09:32:54 :      150 |    20.17 |     3.66 |     0.00 |     0.00 |     0.39 |     6.75 |     0.00 |    -0.24 |
+OPTI 09:35:21 :      200 |    19.55 |     2.74 |     0.00 |     0.00 |     0.32 |     6.52 |     0.00 |    -0.25 |
+OPTI 09:37:48 :      250 |    19.03 |     2.27 |     0.00 |     0.00 |     0.25 |     6.32 |     0.00 |    -0.25 |
+OPTI 09:40:16 :      300 |    18.55 |     1.98 |     0.00 |     0.00 |     0.21 |     6.10 |     0.00 |    -0.25 |
+OPTI 09:42:43 :      350 |    18.15 |     1.85 |     0.00 |     0.00 |     0.19 |     5.91 |     0.00 |    -0.25 |
+OPTI 09:45:10 :      400 |    17.83 |     1.76 |     0.00 |     0.00 |     0.18 |     5.77 |     0.00 |    -0.25 |
+OPTI 09:47:36 :      450 |    17.60 |     1.70 |     0.00 |     0.00 |     0.17 |     5.65 |     0.00 |    -0.26 |
+OPTI 09:50:02 :      500 |    17.40 |     1.68 |     0.00 |     0.00 |     0.17 |     5.56 |     0.00 |    -0.26 |
+OPTI 09:52:30 :      550 |    17.24 |     1.67 |     0.00 |     0.00 |     0.16 |     5.49 |     0.00 |    -0.26 |
+OPTI 09:54:56 :      600 |    17.09 |     1.68 |     0.00 |     0.00 |     0.16 |     5.46 |     0.00 |    -0.26 |
+OPTI 09:57:23 :      650 |    16.96 |     1.67 |     0.00 |     0.00 |     0.15 |     5.48 |     0.00 |    -0.26 |
+OPTI 09:59:50 :      700 |    16.85 |     1.67 |     0.00 |     0.00 |     0.15 |     5.57 |     0.00 |    -0.26 |
+OPTI 10:02:15 :      750 |    16.76 |     1.68 |     0.00 |     0.00 |     0.15 |     5.69 |     0.00 |    -0.26 |
+OPTI 10:04:41 :      800 |    16.71 |     1.69 |     0.00 |     0.00 |     0.15 |     5.76 |     0.00 |    -0.26 |
+OPTI 10:07:06 :      850 |    16.66 |     1.68 |     0.00 |     0.00 |     0.15 |     5.77 |     0.00 |    -0.26 |
+OPTI 10:09:32 :      900 |    16.63 |     1.69 |     0.00 |     0.00 |     0.16 |     5.75 |     0.00 |    -0.26 |
+OPTI 10:11:57 :      950 |    16.60 |     1.70 |     0.00 |     0.00 |     0.16 |     5.67 |     0.00 |    -0.26 |
+OPTI 10:14:21 :     1000 |    16.59 |     1.70 |     0.00 |     0.00 |     0.16 |     5.66 |     0.00 |    -0.26 |
+OPTI 10:16:47 :     1050 |    16.58 |     1.70 |     0.00 |     0.00 |     0.15 |     5.63 |     0.00 |    -0.26 |
+OPTI 10:19:12 :     1100 |    16.56 |     1.71 |     0.00 |     0.00 |     0.15 |     5.58 |     0.00 |    -0.26 |
+OPTI 10:21:37 :     1150 |    16.56 |     1.69 |     0.00 |     0.00 |     0.16 |     5.54 |     0.00 |    -0.26 |
+OPTI 10:24:02 :     1200 |    16.55 |     1.71 |     0.00 |     0.00 |     0.16 |     5.53 |     0.00 |    -0.26 |
+OPTI 10:26:25 :     1250 |    16.55 |     1.72 |     0.00 |     0.00 |     0.16 |     5.52 |     0.00 |    -0.26 |
+OPTI 10:28:50 :     1300 |    16.55 |     1.73 |     0.00 |     0.00 |     0.16 |     5.52 |     0.00 |    -0.26 |
+OPTI 10:31:16 :     1350 |    16.56 |     1.74 |     0.00 |     0.00 |     0.16 |     5.52 |     0.00 |    -0.26 |
+OPTI 10:33:42 :     1400 |    16.56 |     1.73 |     0.00 |     0.00 |     0.16 |     5.57 |     0.00 |    -0.26 |
+OPTI 10:36:06 :     1450 |    16.56 |     1.75 |     0.00 |     0.00 |     0.16 |     5.56 |     0.00 |    -0.26 |
+OPTI 10:38:32 :     1500 |    16.55 |     1.75 |     0.00 |     0.00 |     0.15 |     5.58 |     0.00 |    -0.26 |
+OPTI 10:40:58 :     1550 |    16.55 |     1.73 |     0.00 |     0.00 |     0.15 |     5.66 |     0.00 |    -0.26 |
+OPTI 10:43:24 :     1600 |    16.54 |     1.74 |     0.00 |     0.00 |     0.15 |     5.67 |     0.00 |    -0.26 |
+OPTI 10:45:50 :     1650 |    16.54 |     1.73 |     0.00 |     0.00 |     0.15 |     5.67 |     0.00 |    -0.26 |
+OPTI 10:48:17 :     1700 |    16.55 |     1.74 |     0.00 |     0.00 |     0.15 |     5.63 |     0.00 |    -0.26 |
+OPTI 10:50:43 :     1750 |    16.56 |     1.73 |     0.00 |     0.00 |     0.15 |     5.59 |     0.00 |    -0.26 |
+OPTI 10:53:09 :     1800 |    16.56 |     1.74 |     0.00 |     0.00 |     0.15 |     5.54 |     0.00 |    -0.26 |
+OPTI 10:55:34 :     1850 |    16.56 |     1.73 |     0.00 |     0.00 |     0.15 |     5.51 |     0.00 |    -0.26 |
+OPTI 10:58:01 :     1900 |    16.56 |     1.71 |     0.00 |     0.00 |     0.15 |     5.49 |     0.00 |    -0.26 |
+OPTI 11:00:27 :     1950 |    16.56 |     1.73 |     0.00 |     0.00 |     0.15 |     5.51 |     0.00 |    -0.26 |
+IGM %s :         Iterations   |         Time (y)     |     Time Step (y)   |   Ice Volume (km^3) 
+IGM 11:02:57 :           0    |          2000        |        0.24        |          16.54 
+IGM 11:02:59 :           1    |          2000        |        0.28        |          16.54 
+Computational statistics report:
+                      iceflow  |  mean time per it :   2.8299  |  total :   5.6597  |  number it  :        2
+                     optimize  |  mean time per it :   2.9128  |  total : 5825.5610  |  number it  :     2000
+                    time_step  |  mean time per it :   0.0032  |  total :   0.0064  |  number it  :        2
+                          thk  |  mean time per it :   0.0035  |  total :   0.0070  |  number it  :        2
+                write_ncdf_ex  |  mean time per it :   0.0283  |  total :   0.0566  |  number it  :        2
+                 write_plot2d  |  mean time per it :   0.3837  |  total :   0.7674  |  number it  :        2
