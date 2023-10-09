@@ -1,0 +1,32 @@
+2023-10-09 09:42:41.213207: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2023-10-09 09:42:41.261047: E tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:9342] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2023-10-09 09:42:41.261077: E tensorflow/compiler/xla/stream_executor/cuda/cuda_fft.cc:609] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2023-10-09 09:42:41.261102: E tensorflow/compiler/xla/stream_executor/cuda/cuda_blas.cc:1518] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2023-10-09 09:42:41.270052: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2023-10-09 09:42:41.270309: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-10-09 09:42:44.508388: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/projects/etpi5866/igm/igm/modules/preproc/optimize.py:755: RuntimeWarning: invalid value encountered in divide
+  costs[:, i] /= np.max(costs[:, i])
+WARNING: the following parameters of the json file do not exist in igm:  opti_velobs_std
+                   Step  |  ICE_VOL |  COST_U  |  COST_H  |  COST_D  |  COST_S  |   REGU_H |   REGU_S | COST_GLEN  
+OPTI 09:43:01 :        0 |    23.33 |    50.33 |     0.00 |     0.00 |     0.00 |    31.89 |     0.00 |    -0.33 |
+OPTI 09:45:28 :       50 |    21.46 |     9.36 |     0.00 |     0.00 |     1.07 |    24.39 |     0.00 |    -0.25 |
+OPTI 09:47:54 :      100 |    20.25 |     5.59 |     0.00 |     0.00 |     0.58 |    20.80 |     0.00 |    -0.23 |
+OPTI 09:50:21 :      150 |    19.26 |     3.95 |     0.00 |     0.00 |     0.42 |    18.64 |     0.00 |    -0.23 |
+OPTI 09:52:46 :      200 |    18.37 |     3.28 |     0.00 |     0.00 |     0.32 |    17.50 |     0.00 |    -0.23 |
+OPTI 09:55:11 :      250 |    17.64 |     2.94 |     0.00 |     0.00 |     0.28 |    16.76 |     0.00 |    -0.23 |
+OPTI 09:57:36 :      300 |    17.05 |     2.80 |     0.00 |     0.00 |     0.25 |    16.21 |     0.00 |    -0.23 |
+OPTI 10:00:02 :      350 |    16.60 |     2.67 |     0.00 |     0.00 |     0.23 |    15.93 |     0.00 |    -0.23 |
+OPTI 10:02:28 :      400 |    16.24 |     2.60 |     0.00 |     0.00 |     0.22 |    15.76 |     0.00 |    -0.23 |
+OPTI 10:04:53 :      450 |    15.95 |     2.59 |     0.00 |     0.00 |     0.21 |    15.32 |     0.00 |    -0.23 |
+IGM %s :         Iterations   |         Time (y)     |     Time Step (y)   |   Ice Volume (km^3) 
+IGM 10:07:21 :           0    |          2000        |        0.22        |          15.71 
+IGM 10:07:23 :           1    |          2000        |        0.25        |          15.71 
+Computational statistics report:
+                      iceflow  |  mean time per it :   2.7949  |  total :   5.5897  |  number it  :        2
+                     optimize  |  mean time per it :   2.9208  |  total : 1460.3874  |  number it  :      500
+                    time_step  |  mean time per it :   0.0032  |  total :   0.0064  |  number it  :        2
+                          thk  |  mean time per it :   0.0032  |  total :   0.0064  |  number it  :        2
+                write_ncdf_ex  |  mean time per it :   0.0285  |  total :   0.0569  |  number it  :        2
+                 write_plot2d  |  mean time per it :   0.3811  |  total :   0.7621  |  number it  :        2
