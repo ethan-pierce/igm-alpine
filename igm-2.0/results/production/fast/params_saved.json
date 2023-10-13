@@ -64,7 +64,7 @@
   "type_iceflow": "emulated",
   "emulator": "myemulator",
   "iceflow_physics": 2,
-  "init_slidingco": 45000,
+  "init_slidingco": 35000,
   "init_arrhenius": 78,
   "regu_glen": 1e-05,
   "regu_weertman": 1e-10,
